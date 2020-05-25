@@ -1,9 +1,6 @@
 <?php
 
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "plantytest";
+require_once 'login.php';
 
 
 try {
@@ -11,7 +8,7 @@ try {
   // set the PDO error mode to exception
   $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
   $sql = "INSERT INTO Products (name, description, price)
-  VALUES ('Monstera', 'Phildodendron', '29.95')";
+  VALUES ('Monstera', 'Phildodendron', 29.95)";
   // use exec() because no results are returned
   $conn->exec($sql);
   echo "New Product added successfully to Productlist";

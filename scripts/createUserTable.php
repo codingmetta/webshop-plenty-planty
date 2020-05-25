@@ -19,7 +19,7 @@ $sql = "CREATE TABLE Users (
   forename VARCHAR(30) NOT NULL,
   surname VARCHAR(30) NOT NULL,
   email VARCHAR(50),
-  username FLOAT(50) NOT NULL UNIQUE,
+  username VARCHAR(50) NOT NULL UNIQUE,
   password VARCHAR(32) NOT NULL
   )";
 
