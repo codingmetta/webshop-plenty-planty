@@ -10,8 +10,10 @@ try {
   echo "Connection failed: " . $e->getMessage();
 }
 
+/*
 $salt1    = "qm&h*";
 $salt2    = "pg!@";
+
 
 $forename = 'Bill';
 $surname  = 'Smith';
@@ -30,6 +32,7 @@ $password = 'acrobat';
 $token    = hash('ripemd128', "$salt1$password$salt2");
 
 add_user($conn, $forename, $surname, $email, $username, $token);
+*/
 
 function add_user($conn, $fn, $sn, $em, $un, $pw)
 {
