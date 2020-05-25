@@ -1,10 +1,6 @@
 <?php
 
-$servername= "localhost";
-$username= "root";
-$password="";
-$dbname= "plantytest";
-
+require_once 'login.php';
 /*
 //MSQLi  Object Oriented Connection
 // Create connection
