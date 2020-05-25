@@ -13,27 +13,18 @@ class Product {
 	private $description;
 	private $price; 
 	private $rating; 
-	private $img_path;
+	//private $img_path;
 
 
-	function Product($name, $description, $price, $rating, $img_path){
+	function __construct($id, $name, $description, $price, $rating){
 
 		$this->name= $name;
 		$this->description= $description;
 		$this->price= $price;
 		$this->rating= $rating;
-		$this->img_path= $img_path;
+		//$this->img_path= $img_path;
 	}
 
-	/*
-	function _constructor($name, $description, $price, $rating, $img_path){
-
-		$this->name= $name;
-		$this->description= $description;
-		$this->price= $price;
-		$this->rating= $rating;
-		$this->img_path= $img_path;
-	}*/
 
 	function set_id($id) {
         $this->id = $id;
