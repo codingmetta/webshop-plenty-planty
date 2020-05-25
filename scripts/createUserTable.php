@@ -2,7 +2,6 @@
 
 require_once 'login.php';
 
-
 //Create PDO Connection to DB "plantytest"
 try {
   $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
@@ -13,26 +12,25 @@ try {
   echo "Connection failed: " . $e->getMessage();
 }
 
-
-/*
 try{
 
-//SQL to create table for products
-$sql = "CREATE TABLE Products (
-  id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY, 
-  name VARCHAR(30) NOT NULL,
-  description VARCHAR(30) NOT NULL,
-  price FLOAT(50),
-  rating VARCHAR(50)
+//SQL to create table for Users
+$sql = "CREATE TABLE Users (
+  forename VARCHAR(30) NOT NULL,
+  surname VARCHAR(30) NOT NULL,
+  email VARCHAR(50),
+  username FLOAT(50) NOT NULL UNIQUE,
+  password VARCHAR(32) NOT NULL
   )";
 
 // use exec() because no results are returned
 $conn->exec($sql);
-  echo "Table Products created successfully";
+  echo "Table Users successfully created.";
 } catch(PDOException $e) {
   echo $sql . "<br>" . $e->getMessage();
 }
-*/
+
+
 
 $conn = null;
 

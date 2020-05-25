@@ -2,7 +2,6 @@
 
 require_once 'login.php';
 
-
 //Create PDO Connection to DB "plantytest"
 try {
   $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
@@ -14,7 +13,7 @@ try {
 }
 
 
-/*
+
 try{
 
 //SQL to create table for products
@@ -32,7 +31,7 @@ $conn->exec($sql);
 } catch(PDOException $e) {
   echo $sql . "<br>" . $e->getMessage();
 }
-*/
+
 
 $conn = null;
 
