@@ -6,7 +6,7 @@
 <body>
 
 
-<form name= "form" action="registration-submit.php" method="post">
+<form name= "form" action="../scripts/registration-submit.php" method="post">
   <div class="container">
     <h1>Register</h1>
     <p>Please fill in this form to create an account.</p>

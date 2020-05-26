@@ -1,5 +1,5 @@
 <?php 
-require'../scripts/login.php';
+require'login.php';
 
 //Create PDO Connection to DB "plantytest"
 try {
@@ -18,8 +18,8 @@ $forename = $_POST['forename'];
 $surname  = $_POST['surname'];
 $email = $_POST['email'];
 $un = $_POST['username'];
-$pw = $_POST['password'];
-$token    = hash('ripemd128', "$salt1$password$salt2");
+$passw = $_POST['password'];
+$token    = hash('ripemd128', "$salt1$passw$salt2");
 
 
 add_user($conn, $forename, $surname, $email, $un, $token);
