@@ -2,17 +2,15 @@
 
 require_once 'login.php';
 
-//Create PDO Connection to DB "plantytest"
-try {
-  $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
-  // set the PDO error mode to exception
-  $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-  echo "Connected successfully PDO"; 
-} catch(PDOException $e) {
-  echo "Connection failed: " . $e->getMessage();
-}
+// Create connection
+$conn = new mysqli($servername, $username, $password, $dbname);
 
-try{
+// Check connection
+if ($conn->connect_error) {
+  die("Connection failed: " . $conn->connect_error);
+} 
+echo "Connected successfully";
+
 
 //SQL to create table for Users
 $sql = "CREATE TABLE Users (
@@ -24,16 +22,13 @@ $sql = "CREATE TABLE Users (
         password VARCHAR(32) NOT NULL
         )";
 
-// use exec() because no results are returned
-$conn->exec($sql);
-  echo "Table Users successfully created.";
-} catch(PDOException $e) {
-  echo $sql . "<br>" . $e->getMessage();
+if ($conn->query($sql) === TRUE) {
+  echo "Table Users created successfully";
+} else {
+  echo "Error creating table: " . $conn->error;
 }
 
 
-
-$conn = null;
-
+$conn->close();
 
 ?>
