@@ -12,7 +12,11 @@ class Product {
 	private $name;
 	private $description;
 	private $price; 
-	private $rating; 
+	private $rating;
+    private $petfriendly; //bool
+    private $beginnerfriendly; //bool
+    private $aircleansing; //bool
+
 	//private $img_path;
 
 

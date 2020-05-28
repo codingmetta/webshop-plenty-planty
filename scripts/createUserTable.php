@@ -1,5 +1,9 @@
 <?php
-
+/**
+ * Script connects to database and creates a table for users
+ *
+ * @author Talia Deckardt
+ */
 require_once 'login.php';
 
 // Create connection

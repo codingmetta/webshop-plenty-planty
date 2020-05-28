@@ -1,4 +1,11 @@
 <?php 
+
+/**
+ * Script adds user to database with role 'admin'
+ *
+ * @author Talia Deckardt
+ */
+
 require_once 'login.php';
 
 // Create connection
