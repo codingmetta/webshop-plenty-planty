@@ -18,32 +18,27 @@
     <p>Please fill out these fields to create a new product.</p>
     <hr>
 
-    <label for="forename"><b>Productname</b></label>
-    <input type="text" placeholder="Enter your first name" name="forename" id="forename" required>
+    <label for="productname"><b>Productname</b></label>
+    <input type="text" placeholder="Enter Name of Product" name="product_name" id="product_name" required>
+    
+    
+    <label for="price"><b>Price in €</b></label>
+    <input type="text" placeholder="e.g. 12.99 " name="price" id="price" required> 
+    <br> 
 
-    <label for="email"><b>Price</b></label>
-    <input type="text" placeholder="Enter your e-mail adress" name="email" id="email" required>
+    <label for="amount"><b> Amount in Stock </b></label>
+    <input type="number"  name="amount" id="amount" required>
+ 
+   <br> <br>
+    <label for="description"><b>Description</b></label>
+    <input type="text" placeholder="Enter Product Description" name="description" id="description" required>
+ 
+ <hr>
 
-    <label for="surname"><b>Amount in Stock</b></label>
-    <input type="text" placeholder="Enter your last name" name="surname" id="surname" required>
-   
-    <label for="username"><b>Description</b></label>
-    <input type="text" placeholder="Enter an username" name="username" id="username" required>
-
-    <label for="psw"><b>Rating</b></label>
-    <input type="password" placeholder="Enter a password" name="password" id="psw" required>
-
-    <label for="psw-repeat"><b>Repeat password</b></label>
-    <input type="password" placeholder="Repeat the password" name="password-repeat" id="psw-repeat" required>
-    <hr>
-
-    <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
-    <button type="submit" class="registerbtn">Sign me up!</button>
+    <button type="submit" class="btn btn-primary">Update Product DB</button>
   </div>
+  
 
-  <div class="container signin">
-    <p>Already have an account? <a href="#">Log in</a>.</p>
-  </div>
 </form>
 
 
