@@ -18,6 +18,7 @@ echo "Connected successfully";
 
 //SQL to create table for Users
 $sql = "CREATE TABLE Users (
+        user_id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY, 
         role VARCHAR(10) NOT NULL,
         forename VARCHAR(30) NOT NULL,
         surname VARCHAR(30) NOT NULL,

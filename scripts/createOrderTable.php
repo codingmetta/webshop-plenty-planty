@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Script connects to database and creates a table for products
+ * Script connects to database and creates a table for orders purchased by users
  *
  * @author Talia Deckardt
  */
@@ -18,20 +18,18 @@ if ($conn->connect_error) {
 echo "Connected successfully";
 
 
-//SQL to create table for products
-$sql = "CREATE TABLE Products (
-  product_id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY, 
-  name VARCHAR(30) NOT NULL,
-  description VARCHAR(30) NOT NULL,
-  price FLOAT(50),
-  rating_counter INT,
-  rating_sum INT,
-  amount INT(30) 
+//SQL to create table for Orders
+$sql = "CREATE TABLE Orders (
+  order_id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+  product_id INT, 
+  user_id INT UNSIGNED,
+  order_amount INT,
+  FOREIGN KEY(user_id) REFERENCES Users(user_id)
   )";
 
 
 if ($conn->query($sql) === TRUE) {
-  echo "Table Products successfully created";
+  echo "Table Orders successfully created";
 } else {
   echo "Error creating table: " . $conn->error;
 }
