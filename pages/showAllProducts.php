@@ -47,10 +47,19 @@ while( $record = mysqli_fetch_assoc($resultset) ) {
             <h5><?php echo $record['price']; ?> €</h5>
         </div>
         <hr>
-        <div class="desc"><?php echo $record['description']; ?>
+        <div class="desc">
+            <?php echo $record['description']; ?>
         </div>
-      
-
+        <!-- Placeholder only! Implementation for rating system not done yet -->
+        <div class="rating d-flex justify-content-end">
+            <ul class="row rating" style="list-style-type:none; margin-right:2%">
+                <li><i class="far fa-star"></i></li>
+                <li><i class="far fa-star"></i></li>
+                <li><i class="far fa-star"></i></li>
+                <li><i class="far fa-star"></i></li>
+                <li><i class="far fa-star"></i></li>
+            </ul> 
+        </div>
     </div>
     
     <div class="card-footer">
@@ -60,7 +69,7 @@ while( $record = mysqli_fetch_assoc($resultset) ) {
                 <button type="submit" class="btn btn-primary"><i class="fas fa-shopping-cart"></i> Buy</button>
                 </form>
             </div>
-            <div class="desc" id="lbl-stock" style="margin-top:9px; font-size:14px">
+            <div class="desc" id="lbl-stock" style="margin-top:3%; font-size:14px">
                  <?php echo $record['amount']; ?> left in Stock 
             </div>
         </div>
