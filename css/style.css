@@ -92,12 +92,13 @@ a {
   text-align: center;
 }
 
-
-.delete-block{
-    margin: 25px;
+#update-group{
+    margin: 50px;
+    border: 2px black;
 }
 
-.alter-block{
-    margin: 50px;
+#delete-group{
+    margin: 25px;
+    border: 2px black;
 }
   </style>

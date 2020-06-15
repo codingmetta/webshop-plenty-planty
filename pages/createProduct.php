@@ -35,7 +35,7 @@
  
  <hr>
 
-    <button type="submit" class="btn btn-primary">Update Product DB</button>
+    <button type="submit" class="btn btn-primary">Add Product</button>
   </div>
   
 
