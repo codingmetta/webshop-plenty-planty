@@ -91,4 +91,13 @@ a {
   background-color: #f1f1f1;
   text-align: center;
 }
+
+
+.delete-block{
+    margin: 25px;
+}
+
+.alter-block{
+    margin: 50px;
+}
   </style>
