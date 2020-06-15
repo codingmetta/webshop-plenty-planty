@@ -24,6 +24,7 @@ $sql = "CREATE TABLE Products (
   name VARCHAR(30) NOT NULL,
   description VARCHAR(255) NOT NULL,
   price FLOAT(50),
+  img_path VARCHAR(255),
   rating_counter INT,
   rating_sum INT,
   amount INT(30) 

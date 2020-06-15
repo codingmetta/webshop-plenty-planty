@@ -11,8 +11,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 </head>
 <body>
+
+
+<!--Products listed as responsive Cards retrieved from table "Products"  -->
 <div class="container">
-<div class="card-deck">
+<div class="card-columns">
 <?php
 require '../scripts/login.php';
 // Create connection
@@ -23,15 +26,15 @@ if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 } 
 
-$sql = "SELECT product_id, name, price, description, amount FROM Products";
+$sql = "SELECT product_id, name, price, description, amount, img_path FROM Products";
 $resultset = mysqli_query($conn, $sql) or die("database error:". mysqli_error($conn));
 while( $record = mysqli_fetch_assoc($resultset) ) {
 ?>
 <div class="card hovercard">
     <div class="cardheader">
         <div class="avatar">
-        <!--<img alt="" src="<?php echo $record['image']; ?>"> -->
-        <img alt="test" src="../img/fiddle_fig00_570x570.jpg"> 
+        <img alt="" src="<?php echo $record['img_path']; ?>"> 
+        <!--<img alt="test" src="../img/fiddle_fig00_570x570.jpg" > --> 
         </div>
     </div>
     
@@ -43,21 +46,26 @@ while( $record = mysqli_fetch_assoc($resultset) ) {
         <div class="desc"> 
             <h5><?php echo $record['price']; ?> €</h5>
         </div>
+        <hr>
         <div class="desc"><?php echo $record['description']; ?>
         </div>
+      
 
-        <div class="desc">
-        <?php echo $record['amount']; ?> left in Stock
-        </div>
     </div>
     
     <div class="card-footer">
-        <div class="desc">
-            <form> 
-            <button type="submit" class="btn btn-primary"><i class="fas fa-shopping-cart"></i> Buy</button>
-            </form>
+        <div class="d-flex justify-content-between" style="display:flex">
+            <div class="desc" id="btn-buy">
+                <form> 
+                <button type="submit" class="btn btn-primary"><i class="fas fa-shopping-cart"></i> Buy</button>
+                </form>
+            </div>
+            <div class="desc" id="lbl-stock" style="margin-top:9px; font-size:14px">
+                 <?php echo $record['amount']; ?> left in Stock 
+            </div>
         </div>
     </div>
+    
 <!--
 <div class="card-footer bottom">
 <a class="btn btn-primary btn-twitter btn-sm" href="<?php echo $record['twitter']; ?>">
