@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 </head>
 <body>
-
+<!--Deprecated: Script is now contained in pages/modifyProductList.php -->
 
 <form name= "form" action="../scripts/createProduct-submit.php" method="post">
   <div class="container">
