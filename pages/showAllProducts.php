@@ -12,7 +12,50 @@
 </head>
 <body>
 
+<!-- A grey horizontal navbar that becomes vertical on small screens -->
+<nav class="navbar fixed-top navbar-expand-lg bg-light navbar-light">
+  <a class="navbar-brand" href="../index.html">Plenty</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
 
+  <!-- Links -->
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="../index.html">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item dropdown active">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Plants
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item active" href="pages/showAllProducts.php">All Plants</a>
+          <a class="dropdown-item" href="#">Easygoing</a>
+          <a class="dropdown-item" href="#">Big Plants</a>
+          <a class="dropdown-item" href="#">Air Cleaner</a>
+        </div>
+    <li class="nav-item">
+      <a class="nav-link" href="#">About</a>
+    </li>
+     <li class="nav-item">
+      <a class="nav-link" href="#">Contact</a>
+    </li>
+  </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-secondary my-2 my-sm-0" type="submit">Search</button>
+    </form>
+
+        <ul class="navbar-nav navbar-right">
+        <li class = "nav-item">
+        <a  class="nav-link" href="../pages/loginUser.php">Log in</a>
+        </li>
+        <li class="nav-item">
+        <a class="nav-link text-success" href="../pages/registration.php"> Sign up </a></li>
+    </ul>
+</nav>
+<br> <br><br> 
 <!--Products listed as responsive Cards retrieved from table "Products"  -->
 <div class="container">
 <div class="card-columns">
@@ -40,11 +83,11 @@ while( $record = mysqli_fetch_assoc($resultset) ) {
     
     
     <div class="card-body ">
-        <div class="title">
-            <h3><?php echo $record['name']; ?></h3>
+        <div class="card-title">
+            <h4><?php echo $record['name']; ?></h4>
         </div>
-        <div class="desc"> 
-            <h5><?php echo $record['price']; ?> €</h5>
+        <div class="card-text"> 
+            <h6><?php echo $record['price']; ?> €</h6>
         </div>
         <hr>
         <div class="desc">
@@ -75,21 +118,6 @@ while( $record = mysqli_fetch_assoc($resultset) ) {
         </div>
     </div>
     
-<!--
-<div class="card-footer bottom">
-<a class="btn btn-primary btn-twitter btn-sm" href="<?php echo $record['twitter']; ?>">
-<i class="fa fa-twitter"></i>
-</a>
-<a class="btn btn-danger btn-sm" rel="publisher"
-href="<?php echo $record['gplus']; ?>">
-<i class="fa fa-google-plus"></i>
-</a>
-<a class="btn btn-primary btn-sm" rel="publisher"
-href="<?php echo $record['facebook']; ?>">
-<i class="fa fa-facebook"></i>
-</a>
-</div>
--->
 </div>
 
 <?php } ?>
