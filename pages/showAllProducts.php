@@ -33,7 +33,7 @@ while( $record = mysqli_fetch_assoc($resultset) ) {
 <div class="card hovercard">
     <div class="cardheader">
         <div class="avatar">
-        <img alt="" src="<?php echo $record['img_path']; ?>"> 
+        <img class="img-fluid" alt="plant" src="<?php echo $record['img_path']; ?>" style="width:100%; height:17vw; object-fit:cover"> 
         <!--<img alt="test" src="../img/fiddle_fig00_570x570.jpg" > --> 
         </div>
     </div>
