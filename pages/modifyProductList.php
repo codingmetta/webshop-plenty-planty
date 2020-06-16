@@ -30,7 +30,7 @@
 
     <div class="container-fluid">
         <div class="card-columns d-flex flex-row justify-content-center">
-            <div class="card bg-info" id="left-card" style="max-width:22% ">
+            <div class="card bg-info text-light" id="left-card" style="max-width:22% ">
                 <div class="card-header">
                 <br>
                     <h2>Create Product</h2>
@@ -48,9 +48,10 @@
                         <input type="text" placeholder="e.g. 12.95 " name="price" id="price" required> 
                         <br><br> 
 
-                        <label for="amount"><b> Amount in Stock   </b></label>
+                        <label for="amount"><b> Amount in Stock  <br> </b></label>
+                        <br>
                         <input type="number"  name="amount" id="amount" required>
-                         <br> <br><hr>
+                         <br> <br><hr><br>
 
                         <label for="img_path"><b> Relative Image Path </b></label>
                         <input type="text" placeholder="e.g. ../img/pilea.jpg" name="img_path" id="img_path" required>
@@ -62,7 +63,7 @@
                         <p style="text-size: 6px">e.g. pilea peperomioides | beginner-friendly | southern china</p>
                         <textarea type="text" name="description" id="description" rows="4" cols="24" style="" required>
                         </textarea>
-                         <br> <br><br> <br><hr> <br> 
+                          <br><br> <hr><br> <br>  
                         <button type="submit" class="btn btn-block btn-dark"><i class="fas fa-plus"></i>  Add Product</button>
                     </form>
                 </div>
@@ -72,7 +73,7 @@
         
 
 
-        <div class="card d-flex bg-light justify-content-center" id="right-card" style="min-width: 1100px;max_width:78%; padding: 4%" >
+        <div class="card d-flex bg-light justify-content-center" id="right-card" style="min-width: 1100px;max_width:78%; padding: 3.5%" >
             <div class="card-head">
                 <br> <br>
                 <h1 class="text-center"> Welcome back, Admin! </h1>
