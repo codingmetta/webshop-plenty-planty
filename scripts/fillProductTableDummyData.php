@@ -15,7 +15,7 @@ VALUES ('Sanseviera', 'sansevieria trifasciata | oxygen producer | tropical asia
         ('Monkey Mask', 'monstera adansoni | air-cleansing | latin america', '12.95','95','../img/monkeymask.jpg'),
         ('Ariod Palm', 'zamioculcas zamiifolia | beginner-friendly | tansania', '17.95','71','../img/zamio.jpg'),
         ('Money Tree', 'pachira aquatica | beginner-friendly | latin america', '23.95','111','../img/pachira.jpg'),
-        ('Banana Plant', 'musa | fast-growing | subtropical asia', '8.95','21','../img/musa.jpg')";
+        ('Banana Plant', 'musa paradisiaca | fast-growing | subtropical asia', '8.95','21','../img/musa.jpg')";
 
 if ($conn->query($sql) === TRUE) {
   echo "Productlist successfully filled with dummydata.";

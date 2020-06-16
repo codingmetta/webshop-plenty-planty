@@ -40,20 +40,26 @@
                         <hr>
                         <br>  
                         <label for="productname"><b>Productname    </b></label>
-                        <input type="text" placeholder="Enter Name of Product" name="product_name" id="product_name" required>
+                        <input type="text" placeholder="e.g. Ufo Plant " name="product_name" id="product_name" required>
                         <br>
                         
                         <label for="price"><b>Price in €    </b></label>
-                        <input type="text" placeholder="e.g. 12.99 " name="price" id="price" required> 
+                        <input type="text" placeholder="e.g. 12.95 " name="price" id="price" required> 
                         <br> 
 
                         <label for="amount"><b> Amount in Stock </b></label>
                         <input type="number"  name="amount" id="amount" required>
+                         <br> <hr>
+
+                        <label for="img_path"><b> Relative Image Path </b></label>
+                        <input type="text" placeholder="e.g. ../img/pilea.jpg" name="img_path" id="img_path" required>
                     
+                       
                         <br> <br>
 
                         <label for="description"><b>Description</b></label><br>
-                        <textarea type="text" placeholder="Enter Product Description" name="description" id="description" rows="4" cols="20" required>
+                        <p style="text-size: 6px">e.g. pilea peperomioides | beginner-friendly | southern china</p>
+                        <textarea type="text" name="description" id="description" rows="4" cols="24" style="" required>
                         </textarea>
                         <br> <br> <br> 
 
