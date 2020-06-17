@@ -30,10 +30,11 @@
 
     <div class="container-fluid">
         <div class="card-columns d-flex flex-row justify-content-center">
+            <!--Left Card to creates Products-->
             <div class="card bg-info text-light" id="left-card" style="max-width:22% ">
                 <div class="card-header">
                 <br>
-                    <h2>Create Product</h2>
+                    <h2> <i class="fas fa-pencil-ruler" style="margin:3%"></i>Create Product</h2>
                         <br>
                         <p>Please fill out these fields to create a new product.</p>
                 </div>
@@ -72,7 +73,7 @@
 
         
 
-
+        <!--Right Card displaying Products from db-->
         <div class="card d-flex bg-light justify-content-center" id="right-card" style="min-width: 1100px;max_width:78%; padding: 3.5%" >
             <div class="card-head">
                 <br> <br>
@@ -80,7 +81,7 @@
             </div>
             <div class="card-body">
                 <br> 
-                <h3> Product List </h3>
+                <h3><i class="fas fa-th-list" style="margin:2%"></i>  Product List </h3>
                 <br>
                 <table class="table table-striped table-bordered" id="productList">
                     <thead> 
