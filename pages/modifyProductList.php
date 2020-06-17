@@ -65,7 +65,7 @@
                         <textarea type="text" name="description" id="description" rows="4" cols="24" style="" required>
                         </textarea>
                           <br><br> <hr><br> <br>  
-                        <button type="submit" class="btn btn-block btn-dark"><i class="fas fa-plus"></i>  Add Product</button>
+                        <button type="submit" class="btn btn-block btn-dark"><i class="fas fa-plus" style="margin:2%"></i>  Add Product</button>
                     </form>
                 </div>
             </div>
@@ -81,7 +81,7 @@
             </div>
             <div class="card-body">
                 <br> 
-                <h3><i class="fas fa-th-list" style="margin:2%"></i>  Product List </h3>
+                <h3><i class="fas fa-th-list" style="margin:1%"></i>  Product List </h3>
                 <br>
                 <table class="table table-striped table-bordered" id="productList">
                     <thead> 
@@ -138,7 +138,7 @@
                             </label> 
                             <input type="number" placeholder="New Amount" name="newamount" id="newamount" required>
                             <hr> <br> 
-                            <button type="submit" class="btn btn-block btn-primary"><i class="fas fa-sync-alt"></i>  Update </button>
+                            <button type="submit" class="btn btn-block btn-primary"><i class="fas fa-sync-alt" style="margin:2%"></i>  Update </button>
                             </form>
                         </div>
                     </div>
@@ -154,7 +154,7 @@
                             <input type="text" placeholder="Product ID" name="delete" id="delete" required></label>
                        
                         <br> <br> <br> <hr> <br>
-                            <button type="submit" class="btn btn-danger btn-block"><i class="fas fa-trash-alt"></i> Delete </button>
+                            <button type="submit" class="btn btn-danger btn-block"><i class="fas fa-trash-alt" style="margin:2%"></i> Delete </button>
                             </form>
                         </div>
                     </div>
