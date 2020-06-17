@@ -26,6 +26,7 @@ $check_passed = check_password($passw, $repassw);
 
 if ($check_passed){
     add_user($conn, $role, $forename, $surname, $email, $un, $token);
+    echo 'Registered user.';
 } else {
     echo 'Repeated Password is incorrect. Please try again.';
 }
