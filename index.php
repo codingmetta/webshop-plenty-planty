@@ -69,7 +69,7 @@
                     '</div>' .
                 '</li>'.
                 '<li class="nav-item ">' .
-                '<a class="nav-link text-danger" href="#"> Log Out </a></li>' .
+                '<a class="nav-link text-danger" href="scripts/destroySession.php"> Log Out </a></li>' .
             '</ul>' .
         '</nav>';
         }
