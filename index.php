@@ -38,7 +38,7 @@
                 '</li>' .
                 '<li class="nav-item dropdown">' . 
                     '<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">' .
-                    'Plants' .
+                    ' Plants' .
                     '</a>' .
                     '<div class="dropdown-menu" aria-labelledby="navbarDropdown">' .
                     '<a class="dropdown-item" href="pages/showAllProducts.php">All Plants</a>'.
@@ -46,6 +46,7 @@
                     '<a class="dropdown-item" href="#">Big Plants</a>' .
                     '<a class="dropdown-item" href="#">Air Cleaner</a>' .
                     '</div>' .
+                '</li>'.
                 '<li class="nav-item">' .
                 '<a class="nav-link" href="#">About</a>' .
                 '</li>' .
@@ -58,9 +59,15 @@
             '<button class="btn btn-outline-secondary my-2 my-sm-0" type="submit">Search</button>' .
             '</form>' .
                 '<ul class="navbar-nav navbar-right">' .
-                '<li class = "nav-item">' .
-                '<a  class="nav-link" href="#">My Profile</a>' .
-                '</li>' .
+                '<li class="nav-item dropdown">' . 
+                    '<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">' .
+                    ' My Profile' .
+                    '</a>' .
+                    '<div class="dropdown-menu" aria-labelledby="navbarDropdown">' .
+                    '<a class="dropdown-item" href="#">My Purchases</a>'.
+                    '<a class="dropdown-item" href="#">My Reviews</a>' .
+                    '</div>' .
+                '</li>'.
                 '<li class="nav-item ">' .
                 '<a class="nav-link text-danger" href="#"> Log Out </a></li>' .
             '</ul>' .
