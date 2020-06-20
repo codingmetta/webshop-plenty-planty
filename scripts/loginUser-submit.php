@@ -33,10 +33,10 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 			$_SESSION['password'] = $pw_temp;
 			$_SESSION['forename'] = $row[2];
 			$_SESSION['surname']  = $row[3];
+            $_SESSION['role'] = $row[1];
 			echo "$row[2] $row[3] : Hi $row[2],
 				you are now logged in as '$row[5]'";
-			die ("<p><a href='continue.php'>Click here to continue</a></p>");
-            //die ("<p><a href='#'>Click here to continue</a></p>");
+			die ("<p><a href='../index.php'>Click here to continue</a></p>");
 		}
 		else die("Invalid username/password combination");
 	}

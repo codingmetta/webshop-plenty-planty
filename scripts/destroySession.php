@@ -1,14 +1,14 @@
 <?php
-
 if (isset($_SESSION['username']))
   {
     $username = $_SESSION['username'];
     $password = $_SESSION['password'];
     $forename = $_SESSION['forename'];
     $surname  = $_SESSION['surname'];
-
     //destroy_session_and_data();
 	destroySession();
+    header('Clear-Site-Data: "*"');
+
     echo "Welcome back $forename.<br>
           Your full name is $forename $surname.<br>
           Your username is '$username'
