@@ -1,4 +1,6 @@
 <!DOCTYPE html>
+<!--Deprecated??: Script is now contained in pages/modifyProductList.php -->
+
 <html>
 <body>
 <head>
