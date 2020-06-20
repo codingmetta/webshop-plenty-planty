@@ -7,7 +7,7 @@
 
     if (isset($_SESSION['username']))
     {
-        $username     = $_SESSION['username'];
+        $username = $_SESSION['username'];
         $loggedin = TRUE;
         $role     = $_SESSION['role'];
     }

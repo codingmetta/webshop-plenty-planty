@@ -65,7 +65,7 @@
     
     echo    '<ul class="navbar-nav navbar-right">' .
                 '<li class = "nav-item">' .
-                '<a  class="nav-link" href="#">Profile</a>' .
+                '<a  class="nav-link" href="#">My Profile</a>' .
                 '</li>' .
                 '<li class="nav-item">' .
                 '<a class="nav-link text-danger" href="../scripts/destroySession.php"> Log Out </a></li>' .
