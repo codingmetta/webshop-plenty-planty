@@ -110,7 +110,6 @@ while( $record = mysqli_fetch_assoc($resultset) ) {
     <div class="cardheader">
         <div class="avatar">
         <img class="img-fluid" alt="plant" src="<?php echo $record['img_path']; ?>" style="width:100%; height:17vw; object-fit:cover"> 
-        <!--<img alt="test" src="../img/fiddle_fig00_570x570.jpg" > --> 
         </div>
     </div>
     
@@ -141,9 +140,12 @@ while( $record = mysqli_fetch_assoc($resultset) ) {
     <div class="card-footer">
         <div class="d-flex justify-content-between" style="display:flex">
             <div class="desc" id="btn-buy">
-                <form> 
-                <button type="submit" class="btn btn-primary"><i class="fas fa-shopping-cart"></i> Buy</button>
-                </form>
+            <?php $product_id=$record['product_id']; 
+                echo '<form name="form" action="../scripts/purchase-submit.php" method="post">' .
+                    '<input type = "hidden" name = "product_id" value =$product_id/>' .
+                    '<button type="submit" class="btn btn-primary"><i class="fas fa-shopping-cart"></i> Buy</button>' .
+                    '</form>';
+            ?>
             </div>
             <div class="desc" id="lbl-stock" style="margin-top:3%; font-size:14px">
                  <?php echo $record['amount']; ?> left in Stock 
