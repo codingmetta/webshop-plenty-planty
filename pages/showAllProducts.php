@@ -41,7 +41,7 @@
             Plants
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item active" href="pages/showAllProducts.php">All Plants</a>
+            <a class="dropdown-item active" href="showAllProducts.php">All Plants</a>
             <a class="dropdown-item" href="#">Easygoing</a>
             <a class="dropdown-item" href="#">Big Plants</a>
             <a class="dropdown-item" href="#">Air Cleaner</a>
@@ -69,7 +69,7 @@
                     ' My Profile' .
                     '</a>' .
                     '<div class="dropdown-menu" aria-labelledby="navbarDropdown">' .
-                    '<a class="dropdown-item" href="#">My Purchases</a>'.
+                    '<a class="dropdown-item" href="showMyOrders.php">My Orders</a>'.
                     '<a class="dropdown-item" href="#">My Reviews</a>' .
                     '</div>' .
                 '</li>'.
