@@ -24,4 +24,20 @@
 */
 var menudata={children:[
 {text:"Main Page",url:"index.html"},
-{text:"Related Pages",url:"pages.html"}]}
+{text:"Related Pages",url:"pages.html"},
+{text:"Files",url:"files.html",children:[
+{text:"File List",url:"files.html"},
+{text:"Globals",url:"globals.html",children:[
+{text:"All",url:"globals.html",children:[
+{text:"$",url:"globals.html#index__24"},
+{text:"a",url:"globals.html#index_a"},
+{text:"d",url:"globals.html#index_d"},
+{text:"e",url:"globals.html#index_e"},
+{text:"i",url:"globals.html#index_i"},
+{text:"m",url:"globals.html#index_m"},
+{text:"u",url:"globals.html#index_u"}]},
+{text:"Functions",url:"globals_func.html"},
+{text:"Variables",url:"globals_vars.html",children:[
+{text:"$",url:"globals_vars.html#index__24"},
+{text:"e",url:"globals_vars.html#index_e"},
+{text:"i",url:"globals_vars.html#index_i"}]}]}]}]}
