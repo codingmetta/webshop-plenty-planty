@@ -1,7 +1,7 @@
 <?php 
 
 /**
- * Script adds user to database with role 'admin'
+ * Script adds user to database with role 'admin' when called
  *
  * @author Talia Deckardt
  */

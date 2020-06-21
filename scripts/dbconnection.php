@@ -1,5 +1,7 @@
 <?php
-/**
+//NOT USED RIGHT NOW
+
+/** 
  * Script checks if connection to database is possible 
  *
  * @author Talia Deckardt

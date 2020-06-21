@@ -1,4 +1,11 @@
 <?php 
+/**
+ * Script connects to database and fills the User table
+ * with dummy data. 
+ *
+ * @author Talia Deckardt
+ */
+
 require_once 'login.php';
 $conn = new mysqli($servername, $username, $password, $dbname);
 

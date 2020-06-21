@@ -1,4 +1,11 @@
-<?php // continue.php
+<?php 
+/**
+ * Script gets called after the Log In to start a session, 
+ * saves the users meta-information to the session,
+ * and redirects the user.
+ *
+ * @author Talia Deckardt
+ */
   session_start();
 
   if (isset($_SESSION['username']))

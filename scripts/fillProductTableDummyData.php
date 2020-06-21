@@ -1,12 +1,14 @@
 <?php
+/**
+ * Script connects to database and fills the Productcatalogue
+ * with dummy data. 
+ *
+ * @author Talia Deckardt
+ */
 require 'login.php';
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
-// Check connection
-if ($conn->connect_error) {
-  die("Connection failed: " . $conn->connect_error);
-} 
 
 $sql = "INSERT INTO Products (name, description, price, amount, img_path)
 VALUES ('Sanseviera', 'sansevieria trifasciata | oxygen producer | tropical asia and africa', '11.95','65', '../img/sanseviera.jpg'),

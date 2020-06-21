@@ -1,7 +1,16 @@
-<?php // authenticate2.php
+<?php 
+/**
+ * Script connects to database and gets submitted username 
+ * and password inserted by the user into the login prompt.
+ * The script checks if the username exists and if the given
+ * password is correct. If its correct the session gets filled
+ * with the users credentials and the user is now logged in.
+ *
+ * 
+ * @author Talia Deckardt
+ */
   require_once 'login.php';
 
-// Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
 
   if ($conn->connect_error) die($conn->connect_error);

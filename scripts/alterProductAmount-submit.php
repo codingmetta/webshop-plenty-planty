@@ -1,4 +1,9 @@
 <?php 
+/**
+ * Script connects to database and alters the amount of a product in stock 
+ *
+ * @author Talia Deckardt
+ */
 require'login.php';
 
 // Create connection

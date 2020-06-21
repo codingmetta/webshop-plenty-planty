@@ -1,4 +1,11 @@
 <?php
+/**
+ * Script destroys the Session Data of the user,
+ * logs out the user, and redirects the unregistered user 
+ * to the Log In page.
+ *
+ * @author Talia Deckardt
+ */
 header('Clear-Site-Data: "*"');
 
 if (isset($_SESSION['username']))

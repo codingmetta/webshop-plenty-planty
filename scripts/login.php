@@ -1,4 +1,10 @@
-<?php // login.php
+<?php
+/**
+ * Script holds required information for db connection.
+ *
+ * @author Talia Deckardt
+ */
+ 
 $servername= "localhost";
 $username= "root";
 $password="";

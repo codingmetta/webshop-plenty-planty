@@ -1,6 +1,7 @@
 <?php
 
 /**
+ * NOT USED RIGHT NOW
  * Script connects to database and creates a table for orders purchased by users
  *
  * @author Talia Deckardt

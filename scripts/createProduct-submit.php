@@ -1,14 +1,15 @@
 <?php 
-require'login.php';
+/**
+ * Script adds new product to database, when being called
+ * by the submition of productdetails by admin.
+ *
+ *
+ * @author Talia Deckardt
+ */
 
+require'login.php';
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
-
-// Check connection
-if ($conn->connect_error) {
-  die("Connection failed: " . $conn->connect_error);
-} 
-//echo "Connected successfully";
 
 $productname = $_POST['product_name'];
 $description = $_POST['description'];

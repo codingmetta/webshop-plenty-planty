@@ -1,14 +1,14 @@
 <?php 
+/**
+ * Script connects to database registers a 
+ * new user with submitted data. 
+ * 
+ * @author Talia Deckardt
+ */
 require'login.php';
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
-
-// Check connection
-if ($conn->connect_error) {
-  die("Connection failed: " . $conn->connect_error);
-} 
-//echo "Connected successfully";
 
 $salt1    = "qm&h*";
 $salt2    = "pg!@";

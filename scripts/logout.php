@@ -1,4 +1,5 @@
-<?php  
+<?php 
+  /*NOT USED RIGHT NOW*/  
   require 'destroySession.php';
 
   if (isset($_SESSION['username']))

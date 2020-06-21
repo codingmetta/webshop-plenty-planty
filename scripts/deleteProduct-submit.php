@@ -1,14 +1,15 @@
 <?php 
+/**
+ * Script connects to database and deletes a certain Product from the database, 
+ * depending on the submitted Product ID by admin.
+ *
+ *
+ * @author Talia Deckardt
+ */
 require'login.php';
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
-
-// Check connection
-if ($conn->connect_error) {
-  die("Connection failed: " . $conn->connect_error);
-} 
-//echo "Connected successfully";
 
 $delete= $_POST['delete'];
 
