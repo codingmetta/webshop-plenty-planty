@@ -102,7 +102,7 @@ if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 } 
 
-$sql = "SELECT product_id, name, price, description, amount, img_path FROM Products";
+$sql = "SELECT name, price, description, amount, img_path, product_id FROM Products";
 $resultset = mysqli_query($conn, $sql) or die("database error:". mysqli_error($conn));
 while( $record = mysqli_fetch_assoc($resultset) ) {
 ?>
@@ -140,15 +140,21 @@ while( $record = mysqli_fetch_assoc($resultset) ) {
     <div class="card-footer">
         <div class="d-flex justify-content-between" style="display:flex">
             <div class="desc" id="btn-buy">
-            <?php $product_id=$record['product_id']; 
+            <!--
+            <?php  
                 echo '<form name="form" action="../scripts/purchase-submit.php" method="post">' .
-                    '<input type = "hidden" name = "product_id" value =$product_id/>' .
+                    '<input type = "hidden" name = "product_id" value ="$record[product_id]" />' .
                     '<button type="submit" class="btn btn-primary"><i class="fas fa-shopping-cart"></i> Buy</button>' .
                     '</form>';
             ?>
+            -->
+                    <form name="form" action="../scripts/purchase-submit.php" method="post">
+                    <input type = "hidden" name ="product_id" value ="<?php echo $record['product_id']; ?>" />
+                    <button type="submit" class="btn btn-primary"><i class="fas fa-shopping-cart"></i> Buy</button>
+                    </form>
             </div>
             <div class="desc" id="lbl-stock" style="margin-top:3%; font-size:14px">
-                 <?php echo $record['amount']; ?> left in Stock 
+                 <?php echo $record['amount']; ?> left in Stock
             </div>
         </div>
     </div>

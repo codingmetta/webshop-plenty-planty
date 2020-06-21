@@ -5,7 +5,7 @@ require 'login.php';
     session_start();
 
     $product_id = $_POST['product_id'];
-    
+    //echo $product_id;
 
     if (isset($_SESSION['username']))
     {
@@ -14,7 +14,8 @@ require 'login.php';
     }
     else $loggedin = FALSE;
 
-    $parray= array('$product_id'=>'Not rated yet.');
+    $parray= array($product_id=>'Not rated yet.');
+    //$parray= array('$product_id'=>'Not rated yet.');
     //$pstring= json_encode($parray);
     $pstring= serialize($parray);
     $realstring = $conn->real_escape_string($pstring);
