@@ -15,8 +15,7 @@ require 'login.php';
     else $loggedin = FALSE;
 
     $parray= array($product_id=>'Not rated yet.');
-    //$parray= array('$product_id'=>'Not rated yet.');
-    //$pstring= json_encode($parray);
+
     $pstring= serialize($parray);
     $realstring = $conn->real_escape_string($pstring);
     update_purchase($conn, $username, $realstring);
@@ -24,7 +23,6 @@ require 'login.php';
     function update_purchase($conn, $un, $rstr)
     {
     $sql = "UPDATE Users SET purchases=('$rstr') WHERE username='$un'";
-    //$sql = "UPDATE Users SET purchases='3' WHERE username='$un'";
 
     if ($conn->query($sql) === TRUE) {
     echo "Product purchased";
