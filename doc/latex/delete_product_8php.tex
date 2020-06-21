@@ -1,0 +1,46 @@
+\hypertarget{delete_product_8php}{}\doxysection{pages/delete\+Product.php File Reference}
+\label{delete_product_8php}\index{pages/deleteProduct.php@{pages/deleteProduct.php}}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{delete_product_8php_aa8a5a87b9c1a6a0819b88447cbe41877}{\$conn}} = new mysqli(\$servername, \$username, \$password, \$dbname)
+\item 
+\mbox{\hyperlink{destroy_session_8php_ae562638b80859f4e83a249c0c165087a}{if}}(\$conn-\/$>$connect\+\_\+error) \mbox{\hyperlink{delete_product_8php_ab4fc5f54d3662a7a4d39a3c1953c6dfe}{\$sql}} = \char`\"{}S\+E\+L\+E\+CT product\+\_\+id, name, price, amount F\+R\+OM Products\char`\"{}
+\item 
+\mbox{\hyperlink{delete_product_8php_a112ef069ddc0454086e3d1e6d8d55d07}{\$result}} = \$conn-\/$>$query(\$sql)
+\item 
+\mbox{\hyperlink{destroy_session_8php_ae562638b80859f4e83a249c0c165087a}{if}}(\$result-\/$>$num\+\_\+rows $>$ 0) \mbox{\hyperlink{delete_product_8php_ad908b96d32f6275bf3ab9e93283a8588}{else}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{delete_product_8php_aa8a5a87b9c1a6a0819b88447cbe41877}\label{delete_product_8php_aa8a5a87b9c1a6a0819b88447cbe41877}} 
+\index{deleteProduct.php@{deleteProduct.php}!\$conn@{\$conn}}
+\index{\$conn@{\$conn}!deleteProduct.php@{deleteProduct.php}}
+\doxysubsubsection{\texorpdfstring{\$conn}{$conn}}
+{\footnotesize\ttfamily \$conn = new mysqli(\$servername, \$username, \$password, \$dbname)}
+
+\mbox{\Hypertarget{delete_product_8php_a112ef069ddc0454086e3d1e6d8d55d07}\label{delete_product_8php_a112ef069ddc0454086e3d1e6d8d55d07}} 
+\index{deleteProduct.php@{deleteProduct.php}!\$result@{\$result}}
+\index{\$result@{\$result}!deleteProduct.php@{deleteProduct.php}}
+\doxysubsubsection{\texorpdfstring{\$result}{$result}}
+{\footnotesize\ttfamily \$result = \$conn-\/$>$query(\$sql)}
+
+\mbox{\Hypertarget{delete_product_8php_ab4fc5f54d3662a7a4d39a3c1953c6dfe}\label{delete_product_8php_ab4fc5f54d3662a7a4d39a3c1953c6dfe}} 
+\index{deleteProduct.php@{deleteProduct.php}!\$sql@{\$sql}}
+\index{\$sql@{\$sql}!deleteProduct.php@{deleteProduct.php}}
+\doxysubsubsection{\texorpdfstring{\$sql}{$sql}}
+{\footnotesize\ttfamily \mbox{\hyperlink{destroy_session_8php_ae562638b80859f4e83a249c0c165087a}{if}} ( \$conn-\/$>$connect\+\_\+error) \$sql = \char`\"{}S\+E\+L\+E\+CT product\+\_\+id, name, price, amount F\+R\+OM Products\char`\"{}}
+
+\mbox{\Hypertarget{delete_product_8php_ad908b96d32f6275bf3ab9e93283a8588}\label{delete_product_8php_ad908b96d32f6275bf3ab9e93283a8588}} 
+\index{deleteProduct.php@{deleteProduct.php}!else@{else}}
+\index{else@{else}!deleteProduct.php@{deleteProduct.php}}
+\doxysubsubsection{\texorpdfstring{else}{else}}
+{\footnotesize\ttfamily \mbox{\hyperlink{destroy_session_8php_ae562638b80859f4e83a249c0c165087a}{if}} ( \$result-\/$>$num\+\_\+rows $>$ 0) else}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{    echo \textcolor{stringliteral}{"0 results"}}
+
+\end{DoxyCode}

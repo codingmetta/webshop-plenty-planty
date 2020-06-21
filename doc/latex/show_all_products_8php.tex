@@ -1,0 +1,60 @@
+\hypertarget{show_all_products_8php}{}\doxysection{pages/show\+All\+Products.php File Reference}
+\label{show_all_products_8php}\index{pages/showAllProducts.php@{pages/showAllProducts.php}}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{destroy_session_8php_ae562638b80859f4e83a249c0c165087a}{if}}(isset(\$\+\_\+\+S\+E\+S\+S\+I\+ON\mbox{[}\textquotesingle{}username\textquotesingle{}\mbox{]})) \mbox{\hyperlink{logout_8php_aeb154798c244b4119871b717c88a4a37}{else}} \mbox{\hyperlink{show_all_products_8php_acdbc769ad9164bced37444fabc935506}{\$loggedin}} = F\+A\+L\+SE
+\item 
+\mbox{\hyperlink{destroy_session_8php_ae562638b80859f4e83a249c0c165087a}{if}}(\$loggedin \&\& \$role==\textquotesingle{}user\textquotesingle{}) \mbox{\hyperlink{show_all_products_8php_a232d2e06ad82bc6180ac1c4fc246f6f8}{else}}
+\item 
+\mbox{\hyperlink{show_all_products_8php_aa8a5a87b9c1a6a0819b88447cbe41877}{\$conn}} = new mysqli(\$servername, \$username, \$password, \$dbname)
+\item 
+\mbox{\hyperlink{destroy_session_8php_ae562638b80859f4e83a249c0c165087a}{if}}(\$conn-\/$>$connect\+\_\+error) \mbox{\hyperlink{show_all_products_8php_ab4fc5f54d3662a7a4d39a3c1953c6dfe}{\$sql}} = \char`\"{}S\+E\+L\+E\+CT product\+\_\+id, name, price, description, amount, img\+\_\+path F\+R\+OM Products\char`\"{}
+\item 
+\mbox{\hyperlink{show_all_products_8php_aa25e883081c1808302b814e7fce5ea72}{\$resultset}} = mysqli\+\_\+query(\$conn, \$sql) or die(\char`\"{}database error\+:\char`\"{}. mysqli\+\_\+error(\$conn))
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{show_all_products_8php_aa8a5a87b9c1a6a0819b88447cbe41877}\label{show_all_products_8php_aa8a5a87b9c1a6a0819b88447cbe41877}} 
+\index{showAllProducts.php@{showAllProducts.php}!\$conn@{\$conn}}
+\index{\$conn@{\$conn}!showAllProducts.php@{showAllProducts.php}}
+\doxysubsubsection{\texorpdfstring{\$conn}{$conn}}
+{\footnotesize\ttfamily \$conn = new mysqli(\$servername, \$username, \$password, \$dbname)}
+
+\mbox{\Hypertarget{show_all_products_8php_acdbc769ad9164bced37444fabc935506}\label{show_all_products_8php_acdbc769ad9164bced37444fabc935506}} 
+\index{showAllProducts.php@{showAllProducts.php}!\$loggedin@{\$loggedin}}
+\index{\$loggedin@{\$loggedin}!showAllProducts.php@{showAllProducts.php}}
+\doxysubsubsection{\texorpdfstring{\$loggedin}{$loggedin}}
+{\footnotesize\ttfamily \mbox{\hyperlink{destroy_session_8php_ae562638b80859f4e83a249c0c165087a}{if}} (isset( \$\+\_\+\+S\+E\+S\+S\+I\+ON\mbox{[} \textquotesingle{}username\textquotesingle{}\mbox{]})) \mbox{\hyperlink{logout_8php_aeb154798c244b4119871b717c88a4a37}{else}} \$loggedin = F\+A\+L\+SE}
+
+\mbox{\Hypertarget{show_all_products_8php_aa25e883081c1808302b814e7fce5ea72}\label{show_all_products_8php_aa25e883081c1808302b814e7fce5ea72}} 
+\index{showAllProducts.php@{showAllProducts.php}!\$resultset@{\$resultset}}
+\index{\$resultset@{\$resultset}!showAllProducts.php@{showAllProducts.php}}
+\doxysubsubsection{\texorpdfstring{\$resultset}{$resultset}}
+{\footnotesize\ttfamily \$resultset = mysqli\+\_\+query(\$conn, \$sql) or die(\char`\"{}database error\+:\char`\"{}. mysqli\+\_\+error(\$conn))}
+
+\mbox{\Hypertarget{show_all_products_8php_ab4fc5f54d3662a7a4d39a3c1953c6dfe}\label{show_all_products_8php_ab4fc5f54d3662a7a4d39a3c1953c6dfe}} 
+\index{showAllProducts.php@{showAllProducts.php}!\$sql@{\$sql}}
+\index{\$sql@{\$sql}!showAllProducts.php@{showAllProducts.php}}
+\doxysubsubsection{\texorpdfstring{\$sql}{$sql}}
+{\footnotesize\ttfamily \mbox{\hyperlink{destroy_session_8php_ae562638b80859f4e83a249c0c165087a}{if}} ( \$conn-\/$>$connect\+\_\+error) \$sql = \char`\"{}S\+E\+L\+E\+CT product\+\_\+id, name, price, description, amount, img\+\_\+path F\+R\+OM Products\char`\"{}}
+
+\mbox{\Hypertarget{show_all_products_8php_a232d2e06ad82bc6180ac1c4fc246f6f8}\label{show_all_products_8php_a232d2e06ad82bc6180ac1c4fc246f6f8}} 
+\index{showAllProducts.php@{showAllProducts.php}!else@{else}}
+\index{else@{else}!showAllProducts.php@{showAllProducts.php}}
+\doxysubsubsection{\texorpdfstring{else}{else}}
+{\footnotesize\ttfamily \mbox{\hyperlink{destroy_session_8php_ae562638b80859f4e83a249c0c165087a}{if}} ( \$loggedin \&\&\$role==\textquotesingle{}user\textquotesingle{}) else}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{        echo    \textcolor{stringliteral}{'<ul class="navbar-\/nav navbar-\/right">'} .}
+\DoxyCodeLine{                \textcolor{stringliteral}{'<li class = "nav-\/item">'} .}
+\DoxyCodeLine{                \textcolor{stringliteral}{'<a  class="nav-\/link" href="loginUser.php">Log In</a>'} .}
+\DoxyCodeLine{                \textcolor{stringliteral}{'</li>'} .}
+\DoxyCodeLine{                \textcolor{stringliteral}{'<li class="nav-\/item">'} .}
+\DoxyCodeLine{                \textcolor{stringliteral}{'<a class="nav-\/link text-\/success" href="registration.php"> Sign Up </a></li>'} .}
+\DoxyCodeLine{            \textcolor{stringliteral}{'</ul>'}}
+
+\end{DoxyCode}

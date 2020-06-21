@@ -1,0 +1,70 @@
+\hypertarget{purchase-submit_8php}{}\doxysection{scripts/purchase-\/submit.php File Reference}
+\label{purchase-submit_8php}\index{scripts/purchase-\/submit.php@{scripts/purchase-\/submit.php}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{purchase-submit_8php_a6ba28d093b7fdfb15319126072b714ec}{update\+\_\+purchase}} (\$conn, \$un, \$rstr)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{purchase-submit_8php_aa8a5a87b9c1a6a0819b88447cbe41877}{\$conn}} = new mysqli(\$servername, \$username, \$password, \$dbname)
+\item 
+\mbox{\hyperlink{purchase-submit_8php_a2951e45677bff230859296027d785c07}{\$product\+\_\+id}} = \$\+\_\+\+P\+O\+ST\mbox{[}\textquotesingle{}product\+\_\+id\textquotesingle{}\mbox{]}
+\item 
+\mbox{\hyperlink{destroy_session_8php_ae562638b80859f4e83a249c0c165087a}{if}}(isset(\$\+\_\+\+S\+E\+S\+S\+I\+ON\mbox{[}\textquotesingle{}username\textquotesingle{}\mbox{]})) \mbox{\hyperlink{logout_8php_aeb154798c244b4119871b717c88a4a37}{else}} \mbox{\hyperlink{purchase-submit_8php_acdbc769ad9164bced37444fabc935506}{\$loggedin}} = F\+A\+L\+SE
+\item 
+\mbox{\hyperlink{purchase-submit_8php_ab71258a8b4cba43e88f802f4a20cec18}{\$parray}} = array(\textquotesingle{}\$product\+\_\+id\textquotesingle{}=$>$\textquotesingle{}Not rated yet.\textquotesingle{})
+\item 
+\mbox{\hyperlink{purchase-submit_8php_a9af81ad7d616e23ed2af19d97705512f}{\$pstring}} = serialize(\$parray)
+\item 
+\mbox{\hyperlink{purchase-submit_8php_ac799156ff65aefe0554ac02e6eb94dd0}{\$realstring}} = \$conn-\/$>$real\+\_\+escape\+\_\+string(\$pstring)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{purchase-submit_8php_a6ba28d093b7fdfb15319126072b714ec}\label{purchase-submit_8php_a6ba28d093b7fdfb15319126072b714ec}} 
+\index{purchase-\/submit.php@{purchase-\/submit.php}!update\_purchase@{update\_purchase}}
+\index{update\_purchase@{update\_purchase}!purchase-\/submit.php@{purchase-\/submit.php}}
+\doxysubsubsection{\texorpdfstring{update\_purchase()}{update\_purchase()}}
+{\footnotesize\ttfamily update\+\_\+purchase (\begin{DoxyParamCaption}\item[{}]{\$conn,  }\item[{}]{\$un,  }\item[{}]{\$rstr }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{purchase-submit_8php_aa8a5a87b9c1a6a0819b88447cbe41877}\label{purchase-submit_8php_aa8a5a87b9c1a6a0819b88447cbe41877}} 
+\index{purchase-\/submit.php@{purchase-\/submit.php}!\$conn@{\$conn}}
+\index{\$conn@{\$conn}!purchase-\/submit.php@{purchase-\/submit.php}}
+\doxysubsubsection{\texorpdfstring{\$conn}{$conn}}
+{\footnotesize\ttfamily \$conn = new mysqli(\$servername, \$username, \$password, \$dbname)}
+
+\mbox{\Hypertarget{purchase-submit_8php_acdbc769ad9164bced37444fabc935506}\label{purchase-submit_8php_acdbc769ad9164bced37444fabc935506}} 
+\index{purchase-\/submit.php@{purchase-\/submit.php}!\$loggedin@{\$loggedin}}
+\index{\$loggedin@{\$loggedin}!purchase-\/submit.php@{purchase-\/submit.php}}
+\doxysubsubsection{\texorpdfstring{\$loggedin}{$loggedin}}
+{\footnotesize\ttfamily \mbox{\hyperlink{destroy_session_8php_ae562638b80859f4e83a249c0c165087a}{if}} (isset( \$\+\_\+\+S\+E\+S\+S\+I\+ON\mbox{[} \textquotesingle{}username\textquotesingle{}\mbox{]})) \mbox{\hyperlink{logout_8php_aeb154798c244b4119871b717c88a4a37}{else}} \$loggedin = F\+A\+L\+SE}
+
+\mbox{\Hypertarget{purchase-submit_8php_ab71258a8b4cba43e88f802f4a20cec18}\label{purchase-submit_8php_ab71258a8b4cba43e88f802f4a20cec18}} 
+\index{purchase-\/submit.php@{purchase-\/submit.php}!\$parray@{\$parray}}
+\index{\$parray@{\$parray}!purchase-\/submit.php@{purchase-\/submit.php}}
+\doxysubsubsection{\texorpdfstring{\$parray}{$parray}}
+{\footnotesize\ttfamily \$parray = array(\textquotesingle{}\$product\+\_\+id\textquotesingle{}=$>$\textquotesingle{}Not rated yet.\textquotesingle{})}
+
+\mbox{\Hypertarget{purchase-submit_8php_a2951e45677bff230859296027d785c07}\label{purchase-submit_8php_a2951e45677bff230859296027d785c07}} 
+\index{purchase-\/submit.php@{purchase-\/submit.php}!\$product\_id@{\$product\_id}}
+\index{\$product\_id@{\$product\_id}!purchase-\/submit.php@{purchase-\/submit.php}}
+\doxysubsubsection{\texorpdfstring{\$product\_id}{$product\_id}}
+{\footnotesize\ttfamily \$product\+\_\+id = \$\+\_\+\+P\+O\+ST\mbox{[}\textquotesingle{}product\+\_\+id\textquotesingle{}\mbox{]}}
+
+\mbox{\Hypertarget{purchase-submit_8php_a9af81ad7d616e23ed2af19d97705512f}\label{purchase-submit_8php_a9af81ad7d616e23ed2af19d97705512f}} 
+\index{purchase-\/submit.php@{purchase-\/submit.php}!\$pstring@{\$pstring}}
+\index{\$pstring@{\$pstring}!purchase-\/submit.php@{purchase-\/submit.php}}
+\doxysubsubsection{\texorpdfstring{\$pstring}{$pstring}}
+{\footnotesize\ttfamily \$pstring = serialize(\$parray)}
+
+\mbox{\Hypertarget{purchase-submit_8php_ac799156ff65aefe0554ac02e6eb94dd0}\label{purchase-submit_8php_ac799156ff65aefe0554ac02e6eb94dd0}} 
+\index{purchase-\/submit.php@{purchase-\/submit.php}!\$realstring@{\$realstring}}
+\index{\$realstring@{\$realstring}!purchase-\/submit.php@{purchase-\/submit.php}}
+\doxysubsubsection{\texorpdfstring{\$realstring}{$realstring}}
+{\footnotesize\ttfamily \$realstring = \$conn-\/$>$real\+\_\+escape\+\_\+string(\$pstring)}
+

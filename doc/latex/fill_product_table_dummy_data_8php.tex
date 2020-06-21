@@ -1,0 +1,55 @@
+\hypertarget{fill_product_table_dummy_data_8php}{}\doxysection{scripts/fill\+Product\+Table\+Dummy\+Data.php File Reference}
+\label{fill_product_table_dummy_data_8php}\index{scripts/fillProductTableDummyData.php@{scripts/fillProductTableDummyData.php}}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{fill_product_table_dummy_data_8php_aa8a5a87b9c1a6a0819b88447cbe41877}{\$conn}} = new mysqli(\$servername, \$username, \$password, \$dbname)
+\item 
+\mbox{\hyperlink{fill_product_table_dummy_data_8php_a047170d6020a882807665812a27e2525}{\$sql}}
+\item 
+\mbox{\hyperlink{destroy_session_8php_ae562638b80859f4e83a249c0c165087a}{if}}(\$conn-\/$>$query(\$sql)===T\+R\+UE) \mbox{\hyperlink{fill_product_table_dummy_data_8php_a5894a8dcaeff5a403c5ad8a6d070be41}{else}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{fill_product_table_dummy_data_8php_aa8a5a87b9c1a6a0819b88447cbe41877}\label{fill_product_table_dummy_data_8php_aa8a5a87b9c1a6a0819b88447cbe41877}} 
+\index{fillProductTableDummyData.php@{fillProductTableDummyData.php}!\$conn@{\$conn}}
+\index{\$conn@{\$conn}!fillProductTableDummyData.php@{fillProductTableDummyData.php}}
+\doxysubsubsection{\texorpdfstring{\$conn}{$conn}}
+{\footnotesize\ttfamily \$conn = new mysqli(\$servername, \$username, \$password, \$dbname)}
+
+Script connects to database and fills the Productcatalogue with dummy data.
+
+\begin{DoxyAuthor}{Author}
+Talia Deckardt 
+\end{DoxyAuthor}
+\mbox{\Hypertarget{fill_product_table_dummy_data_8php_a047170d6020a882807665812a27e2525}\label{fill_product_table_dummy_data_8php_a047170d6020a882807665812a27e2525}} 
+\index{fillProductTableDummyData.php@{fillProductTableDummyData.php}!\$sql@{\$sql}}
+\index{\$sql@{\$sql}!fillProductTableDummyData.php@{fillProductTableDummyData.php}}
+\doxysubsubsection{\texorpdfstring{\$sql}{$sql}}
+{\footnotesize\ttfamily \$sql}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= \textcolor{stringliteral}{"INSERT INTO Products (name, description, price, amount, img\_path)}}
+\DoxyCodeLine{\textcolor{stringliteral}{VALUES ('Sanseviera', 'sansevieria trifasciata | oxygen producer | tropical asia and africa', '11.95','65', '../img/sanseviera.jpg'),}}
+\DoxyCodeLine{\textcolor{stringliteral}{        ('Monstera', 'monstera deliciosa | air-\/cleansing | latin america', '23.95','42','../img/monstera.jpg'),}}
+\DoxyCodeLine{\textcolor{stringliteral}{        ('Fiddle Leaf', 'ficus lyrata | big leaves | rainforest west-\/africa', '39.95','17','../img/ficus.jpg'),}}
+\DoxyCodeLine{\textcolor{stringliteral}{        ('Monkey Mask', 'monstera adansoni | air-\/cleansing | latin america', '12.95','95','../img/monkeymask.jpg'),}}
+\DoxyCodeLine{\textcolor{stringliteral}{        ('Ariod Palm', 'zamioculcas zamiifolia | beginner-\/friendly | tansania', '17.95','71','../img/zamio.jpg'),}}
+\DoxyCodeLine{\textcolor{stringliteral}{        ('Money Tree', 'pachira aquatica | beginner-\/friendly | latin america', '23.95','111','../img/pachira.jpg'),}}
+\DoxyCodeLine{\textcolor{stringliteral}{        ('Banana Plant', 'musa paradisiaca | fast-\/growing | subtropical asia', '8.95','21','../img/musa.jpg')"}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{fill_product_table_dummy_data_8php_a5894a8dcaeff5a403c5ad8a6d070be41}\label{fill_product_table_dummy_data_8php_a5894a8dcaeff5a403c5ad8a6d070be41}} 
+\index{fillProductTableDummyData.php@{fillProductTableDummyData.php}!else@{else}}
+\index{else@{else}!fillProductTableDummyData.php@{fillProductTableDummyData.php}}
+\doxysubsubsection{\texorpdfstring{else}{else}}
+{\footnotesize\ttfamily \mbox{\hyperlink{destroy_session_8php_ae562638b80859f4e83a249c0c165087a}{if}} ( \$conn-\/$>$query( \$sql)===T\+R\+UE) else}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{  echo \textcolor{stringliteral}{"Error: "} . \mbox{\hyperlink{fill_product_table_dummy_data_8php_a047170d6020a882807665812a27e2525}{\$sql}} . \textcolor{stringliteral}{"<br>"} . \mbox{\hyperlink{fill_product_table_dummy_data_8php_aa8a5a87b9c1a6a0819b88447cbe41877}{\$conn}}-\/>error}
+
+\end{DoxyCode}

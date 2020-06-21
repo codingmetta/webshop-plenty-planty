@@ -1,0 +1,107 @@
+\hypertarget{fill_users_dummy_data_8php}{}\doxysection{scripts/fill\+Users\+Dummy\+Data.php File Reference}
+\label{fill_users_dummy_data_8php}\index{scripts/fillUsersDummyData.php@{scripts/fillUsersDummyData.php}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{fill_users_dummy_data_8php_a9ecd5898571c51df8f274c492ee4b126}{add\+\_\+user}} (\$conn, \$rl, \$fn, \$sn, \$em, \$un, \$pw)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{fill_users_dummy_data_8php_aa8a5a87b9c1a6a0819b88447cbe41877}{\$conn}} = new mysqli(\$servername, \$username, \$password, \$dbname)
+\item 
+\mbox{\hyperlink{fill_users_dummy_data_8php_a1838e8db5994667663465b7cc2e5ddde}{\$salt1}} = \char`\"{}qm\&h$\ast$\char`\"{}
+\item 
+\mbox{\hyperlink{fill_users_dummy_data_8php_a82035126b7810757ddec8ae2a3b60593}{\$salt2}} = \char`\"{}pg!@\char`\"{}
+\item 
+\mbox{\hyperlink{fill_users_dummy_data_8php_a1ea903cca285c7c0b4c9203932100309}{\$role}} = \textquotesingle{}user\textquotesingle{}
+\item 
+\mbox{\hyperlink{fill_users_dummy_data_8php_a8dafa728d706725e4c2220b8c577364b}{\$forename}} = \textquotesingle{}Sarah\textquotesingle{}
+\item 
+\mbox{\hyperlink{fill_users_dummy_data_8php_a5c7ca58dd36213d80d84035699c3ed73}{\$surname}} = \textquotesingle{}Herb\textquotesingle{}
+\item 
+\mbox{\hyperlink{fill_users_dummy_data_8php_ad634f418b20382e2802f80532d76d3cd}{\$email}} = \textquotesingle{}hello@herb.\+de\textquotesingle{}
+\item 
+\mbox{\hyperlink{fill_users_dummy_data_8php_a0eb82aa5f81cf845de4b36cd653c42cf}{\$username}} = \textquotesingle{}user1\textquotesingle{}
+\item 
+\mbox{\hyperlink{fill_users_dummy_data_8php_a607686ef9f99ea7c42f4f3dd3dbb2b0d}{\$password}} = \textquotesingle{}user1\textquotesingle{}
+\item 
+\mbox{\hyperlink{fill_users_dummy_data_8php_a00ae4fcafb1145f5e968bdf920f83e2e}{\$token}} = hash(\textquotesingle{}ripemd128\textquotesingle{}, \char`\"{}\$salt1\$password\$salt2\char`\"{})
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{fill_users_dummy_data_8php_a9ecd5898571c51df8f274c492ee4b126}\label{fill_users_dummy_data_8php_a9ecd5898571c51df8f274c492ee4b126}} 
+\index{fillUsersDummyData.php@{fillUsersDummyData.php}!add\_user@{add\_user}}
+\index{add\_user@{add\_user}!fillUsersDummyData.php@{fillUsersDummyData.php}}
+\doxysubsubsection{\texorpdfstring{add\_user()}{add\_user()}}
+{\footnotesize\ttfamily add\+\_\+user (\begin{DoxyParamCaption}\item[{}]{\$conn,  }\item[{}]{\$rl,  }\item[{}]{\$fn,  }\item[{}]{\$sn,  }\item[{}]{\$em,  }\item[{}]{\$un,  }\item[{}]{\$pw }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{fill_users_dummy_data_8php_aa8a5a87b9c1a6a0819b88447cbe41877}\label{fill_users_dummy_data_8php_aa8a5a87b9c1a6a0819b88447cbe41877}} 
+\index{fillUsersDummyData.php@{fillUsersDummyData.php}!\$conn@{\$conn}}
+\index{\$conn@{\$conn}!fillUsersDummyData.php@{fillUsersDummyData.php}}
+\doxysubsubsection{\texorpdfstring{\$conn}{$conn}}
+{\footnotesize\ttfamily \$conn = new mysqli(\$servername, \$username, \$password, \$dbname)}
+
+Script connects to database and fills the User table with dummy data.
+
+\begin{DoxyAuthor}{Author}
+Talia Deckardt 
+\end{DoxyAuthor}
+\mbox{\Hypertarget{fill_users_dummy_data_8php_ad634f418b20382e2802f80532d76d3cd}\label{fill_users_dummy_data_8php_ad634f418b20382e2802f80532d76d3cd}} 
+\index{fillUsersDummyData.php@{fillUsersDummyData.php}!\$email@{\$email}}
+\index{\$email@{\$email}!fillUsersDummyData.php@{fillUsersDummyData.php}}
+\doxysubsubsection{\texorpdfstring{\$email}{$email}}
+{\footnotesize\ttfamily \$email = \textquotesingle{}hello@herb.\+de\textquotesingle{}}
+
+\mbox{\Hypertarget{fill_users_dummy_data_8php_a8dafa728d706725e4c2220b8c577364b}\label{fill_users_dummy_data_8php_a8dafa728d706725e4c2220b8c577364b}} 
+\index{fillUsersDummyData.php@{fillUsersDummyData.php}!\$forename@{\$forename}}
+\index{\$forename@{\$forename}!fillUsersDummyData.php@{fillUsersDummyData.php}}
+\doxysubsubsection{\texorpdfstring{\$forename}{$forename}}
+{\footnotesize\ttfamily \$forename = \textquotesingle{}Sarah\textquotesingle{}}
+
+\mbox{\Hypertarget{fill_users_dummy_data_8php_a607686ef9f99ea7c42f4f3dd3dbb2b0d}\label{fill_users_dummy_data_8php_a607686ef9f99ea7c42f4f3dd3dbb2b0d}} 
+\index{fillUsersDummyData.php@{fillUsersDummyData.php}!\$password@{\$password}}
+\index{\$password@{\$password}!fillUsersDummyData.php@{fillUsersDummyData.php}}
+\doxysubsubsection{\texorpdfstring{\$password}{$password}}
+{\footnotesize\ttfamily \$password = \textquotesingle{}user1\textquotesingle{}}
+
+\mbox{\Hypertarget{fill_users_dummy_data_8php_a1ea903cca285c7c0b4c9203932100309}\label{fill_users_dummy_data_8php_a1ea903cca285c7c0b4c9203932100309}} 
+\index{fillUsersDummyData.php@{fillUsersDummyData.php}!\$role@{\$role}}
+\index{\$role@{\$role}!fillUsersDummyData.php@{fillUsersDummyData.php}}
+\doxysubsubsection{\texorpdfstring{\$role}{$role}}
+{\footnotesize\ttfamily \$role = \textquotesingle{}user\textquotesingle{}}
+
+\mbox{\Hypertarget{fill_users_dummy_data_8php_a1838e8db5994667663465b7cc2e5ddde}\label{fill_users_dummy_data_8php_a1838e8db5994667663465b7cc2e5ddde}} 
+\index{fillUsersDummyData.php@{fillUsersDummyData.php}!\$salt1@{\$salt1}}
+\index{\$salt1@{\$salt1}!fillUsersDummyData.php@{fillUsersDummyData.php}}
+\doxysubsubsection{\texorpdfstring{\$salt1}{$salt1}}
+{\footnotesize\ttfamily \$salt1 = \char`\"{}qm\&h$\ast$\char`\"{}}
+
+\mbox{\Hypertarget{fill_users_dummy_data_8php_a82035126b7810757ddec8ae2a3b60593}\label{fill_users_dummy_data_8php_a82035126b7810757ddec8ae2a3b60593}} 
+\index{fillUsersDummyData.php@{fillUsersDummyData.php}!\$salt2@{\$salt2}}
+\index{\$salt2@{\$salt2}!fillUsersDummyData.php@{fillUsersDummyData.php}}
+\doxysubsubsection{\texorpdfstring{\$salt2}{$salt2}}
+{\footnotesize\ttfamily \$salt2 = \char`\"{}pg!@\char`\"{}}
+
+\mbox{\Hypertarget{fill_users_dummy_data_8php_a5c7ca58dd36213d80d84035699c3ed73}\label{fill_users_dummy_data_8php_a5c7ca58dd36213d80d84035699c3ed73}} 
+\index{fillUsersDummyData.php@{fillUsersDummyData.php}!\$surname@{\$surname}}
+\index{\$surname@{\$surname}!fillUsersDummyData.php@{fillUsersDummyData.php}}
+\doxysubsubsection{\texorpdfstring{\$surname}{$surname}}
+{\footnotesize\ttfamily \$surname = \textquotesingle{}Herb\textquotesingle{}}
+
+\mbox{\Hypertarget{fill_users_dummy_data_8php_a00ae4fcafb1145f5e968bdf920f83e2e}\label{fill_users_dummy_data_8php_a00ae4fcafb1145f5e968bdf920f83e2e}} 
+\index{fillUsersDummyData.php@{fillUsersDummyData.php}!\$token@{\$token}}
+\index{\$token@{\$token}!fillUsersDummyData.php@{fillUsersDummyData.php}}
+\doxysubsubsection{\texorpdfstring{\$token}{$token}}
+{\footnotesize\ttfamily \$token = hash(\textquotesingle{}ripemd128\textquotesingle{}, \char`\"{}\$salt1\$password\$salt2\char`\"{})}
+
+\mbox{\Hypertarget{fill_users_dummy_data_8php_a0eb82aa5f81cf845de4b36cd653c42cf}\label{fill_users_dummy_data_8php_a0eb82aa5f81cf845de4b36cd653c42cf}} 
+\index{fillUsersDummyData.php@{fillUsersDummyData.php}!\$username@{\$username}}
+\index{\$username@{\$username}!fillUsersDummyData.php@{fillUsersDummyData.php}}
+\doxysubsubsection{\texorpdfstring{\$username}{$username}}
+{\footnotesize\ttfamily \$username = \textquotesingle{}user1\textquotesingle{}}
+
