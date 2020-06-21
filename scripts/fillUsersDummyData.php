@@ -1,9 +1,9 @@
 <?php 
-/**
- * Script connects to database and fills the User table
- * with dummy data. 
+/**@file        fillUsersDummyData.php 
+ * @brief      Script connects to database and fills the table 'User'
+ *             with dummy data. 
  *
- * @author Talia Deckardt
+ * @author     Talia Deckardt
  */
 
 require_once 'login.php';

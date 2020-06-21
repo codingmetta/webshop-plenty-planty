@@ -1,8 +1,8 @@
 <?php
-/**
- * Script holds required information for db connection.
+/**@file        login.php 
+ * @brief      Script holds required information for db connection
  *
- * @author Talia Deckardt
+ * @author     Talia Deckardt
  */
  
 $servername= "localhost";

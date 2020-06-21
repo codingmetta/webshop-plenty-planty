@@ -1,13 +1,13 @@
 <?php 
-/**
- * Script connects to database and gets submitted username 
- * and password inserted by the user into the login prompt.
- * The script checks if the username exists and if the given
- * password is correct. If its correct the session gets filled
- * with the users credentials and the user is now logged in.
+/**@file        loginUser-submit.php 
+ * @brief      Script connects to database and gets submitted username 
+ *             and password inserted to the login prompt by the user.
+ *             The script checks if the username exists and if the given
+ *             password is correct. If its correct the session gets filled
+ *             with the users credentials and the user is now logged in.
  *
  * 
- * @author Talia Deckardt
+ * @author     Talia Deckardt
  */
   require_once 'login.php';
 

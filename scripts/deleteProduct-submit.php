@@ -1,10 +1,9 @@
 <?php 
-/**
- * Script connects to database and deletes a certain Product from the database, 
- * depending on the submitted Product ID by admin.
+/**@file        deleteProduct-submit.php
+ * @brief      Script connects to database and deletes a certain Product 
+ *             from the database, depending on the submitted Product ID by admin.
  *
- *
- * @author Talia Deckardt
+ * @author     Talia Deckardt
  */
 require'login.php';
 
@@ -15,6 +14,10 @@ $delete= $_POST['delete'];
 
 delete_product($conn, $delete);
 
+
+/** @fn     'Delete Product' 
+ * @brief   Deletes  Product by Product ID from table 'Products'
+ */
 function delete_product($conn, $del)
 {
 $sql = "DELETE FROM Products WHERE product_id='$del'";

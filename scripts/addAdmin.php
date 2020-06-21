@@ -1,9 +1,8 @@
 <?php 
-/**
- * @file addAmin.php
- * @brief Script adds user to database with role 'admin' when called
+/**@file        addAmin.php 
+ * @brief      Script adds user to database with role 'admin' when called
  *
- * @author Talia Deckardt
+ * @author     Talia Deckardt
  */
 require_once 'login.php';
 
@@ -34,7 +33,9 @@ $token = hash('ripemd128', "$salt1$passw$salt2");
 
 add_user($conn, $role, $forename, $surname, $email, $un, $token);
 
-
+/** @fn 'Add Admin' 
+ * @brief Adds User 'Admin' to table 'Users'
+ */
 function add_user($conn, $rl, $fn, $sn, $em, $un, $pw)
 {
 $sql = "INSERT INTO Users (role, forename, surname, email, username, password) VALUES ('$rl','$fn','$sn','$em', '$un', '$pw')";

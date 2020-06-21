@@ -1,25 +1,24 @@
 <?php 
-/**
- * Script connects to database and alters the amount of a product in stock 
+/**@file        alterProductAmount-submit.php
+ * @brief      Script connects to database and alters the amount of a product in stock 
  *
- * @author Talia Deckardt
+ * @author     Talia Deckardt
  */
-require'login.php';
+require 'login.php';
 
-// Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
-
-// Check connection
 if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 } 
-//echo "Connected successfully";
 
 $newamount= $_POST['newamount'];
 $product_id= $_POST['pid'];
 
 update_amount($conn, $product_id, $newamount);
 
+/** @fn 'Update Product Amount' 
+ * @brief Updates Amount  'Admin' to table 'Users'
+ */
 function update_amount($conn, $pid, $nam)
 {
 $sql = "UPDATE Products SET amount='$nam' WHERE product_id='$pid'";

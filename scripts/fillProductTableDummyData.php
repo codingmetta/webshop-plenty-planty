@@ -1,9 +1,9 @@
 <?php
-/**
- * Script connects to database and fills the Productcatalogue
- * with dummy data. 
+/**@file        fillProductTableDummyData.php 
+ * @brief      Script connects to database and fills the Productcatalogue
+ *             with dummy data. 
  *
- * @author Talia Deckardt
+ * @author     Talia Deckardt
  */
 require 'login.php';
 

@@ -1,9 +1,9 @@
 <?php
 
-/**
- * Script connects to database and creates a table for products
+/**@file         createProductTable.php
+ * @brief       Script connects to database and creates table 'Products'
  *
- * @author Talia Deckardt
+ * @author      Talia Deckardt
  */
 
 require_once 'login.php';

@@ -1,13 +1,12 @@
 <?php
-//NOT USED RIGHT NOW
-
-/** 
- * Script checks if connection to database is possible 
+/**@file         dbconnection.php
+ * @brief       Script checks if connection to database is possible 
  *
  * @author Talia Deckardt
  */
-require_once 'login.php';
+// NURN
 
+require_once 'login.php';
 // Create connection
 $conn = new mysqli($servername, $username, $password);
 

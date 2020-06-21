@@ -1,10 +1,10 @@
 <?php
-/**
- * Script destroys the Session Data of the user,
- * logs out the user, and redirects the unregistered user 
- * to the Log In page.
+/**@file        destroySession.php 
+ * @brief      Script destroys the Session Data of the user,
+ *             logs out the user and redirects the unregistered user 
+ *             to the Log In page.
  *
- * @author Talia Deckardt
+ * @author     Talia Deckardt
  */
 header('Clear-Site-Data: "*"');
 

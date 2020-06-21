@@ -1,14 +1,13 @@
 <?php 
-/**
- * Script adds new product to database, when being called
- * by the submition of productdetails by admin.
+/**@file        createProduct-submit.php
+ * @brief      Script adds new product to database, when being called
+ *             by the submition of productdetails by admin.
  *
- *
- * @author Talia Deckardt
+ * @author     Talia Deckardt
  */
 
 require'login.php';
-// Create connection
+
 $conn = new mysqli($servername, $username, $password, $dbname);
 
 $productname = $_POST['product_name'];

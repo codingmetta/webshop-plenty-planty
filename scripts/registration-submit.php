@@ -1,13 +1,12 @@
 <?php 
-/**
- * Script connects to database registers a 
- * new user with submitted data. 
+/**@file        registration-submit.php 
+ * @brief      Script connects to database and registers a 
+ *             new user with submitted data. 
  * 
- * @author Talia Deckardt
+ * @author     Talia Deckardt
  */
 require'login.php';
 
-// Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
 
 $salt1    = "qm&h*";
@@ -31,8 +30,9 @@ if ($check_passed){
     echo 'Repeated Password is incorrect. Please try again.';
 }
 
-
-/* Add function checkPassword() to check if input of $passw and $repassw are the same*/
+/** @fn 'Double Check Password' 
+ * @brief Checks if both entered passwords are the same
+ */
 function check_password($pw, $rpw){
     if($pw == $rpw){
         return true;
@@ -41,12 +41,13 @@ function check_password($pw, $rpw){
     }
 }
 
-
+/** @fn 'Add User' 
+ * @brief Adds user with given credentials to table 'Users'
+ */
 function add_user($conn, $rl, $fn, $sn, $em, $un, $pw)
 {
 $sql = "INSERT INTO Users (role, forename, surname, email, username, password) VALUES ('$rl','$fn','$sn','$em', '$un', '$pw')";
 if ($conn->query($sql) === TRUE) {
-  //echo "New record created successfully";
 } else {
   echo "Error: " . $sql . "<br>" . $conn->error;
 }
