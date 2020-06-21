@@ -1,10 +1,10 @@
+<?php 
 /**
  * @file addAmin.php
  * @brief Script adds user to database with role 'admin' when called
  *
  * @author Talia Deckardt
  */
-<?php 
 require_once 'login.php';
 
 // Create connection
