@@ -24,6 +24,7 @@ $sql = "CREATE TABLE Orders (
   username VARCHAR(50) NOT NULL,
   order_amount INT(6),
   review VARCHAR(1000),
+  order_date DATE,
   FOREIGN KEY(username) REFERENCES Users(username),
   FOREIGN KEY(product_id) REFERENCES Products(product_id)
   )";
