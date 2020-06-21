@@ -1,10 +1,8 @@
 <?php
-
-/**
- * NOT USED RIGHT NOW
- * Script connects to database and creates a table for orders purchased by users
+/**@file         createOrderTable.php
+ * @brief       Script connects to database and creates table 'Orders'
  *
- * @author Talia Deckardt
+ * @author      Talia Deckardt
  */
 
 require_once 'login.php';
@@ -21,11 +19,13 @@ echo "Connected successfully";
 
 //SQL to create table for Orders
 $sql = "CREATE TABLE Orders (
-  order_id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
-  product_id INT, 
-  user_id INT UNSIGNED,
-  order_amount INT,
-  FOREIGN KEY(user_id) REFERENCES Users(user_id)
+  order_id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+  product_id INT(6) UNSIGNED, 
+  username VARCHAR(50) NOT NULL,
+  order_amount INT(6),
+  review VARCHAR(1000),
+  FOREIGN KEY(username) REFERENCES Users(username),
+  FOREIGN KEY(product_id) REFERENCES Products(product_id)
   )";
 
 

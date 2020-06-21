@@ -140,15 +140,7 @@ while( $record = mysqli_fetch_assoc($resultset) ) {
     <div class="card-footer">
         <div class="d-flex justify-content-between" style="display:flex">
             <div class="desc" id="btn-buy">
-            <!--
-            <?php  
-                echo '<form name="form" action="../scripts/purchase-submit.php" method="post">' .
-                    '<input type = "hidden" name = "product_id" value ="$record[product_id]" />' .
-                    '<button type="submit" class="btn btn-primary"><i class="fas fa-shopping-cart"></i> Buy</button>' .
-                    '</form>';
-            ?>
-            -->
-                    <form name="form" action="../scripts/purchase-submit.php" method="post">
+                    <form name="form" action="../scripts/order-submit.php" method="post">
                     <input type = "hidden" name ="product_id" value ="<?php echo $record['product_id']; ?>" />
                     <button type="submit" class="btn btn-primary"><i class="fas fa-shopping-cart"></i> Buy</button>
                     </form>

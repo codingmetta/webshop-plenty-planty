@@ -1,4 +1,10 @@
-<?php 
+<?php /*DEPRECATED*/
+/**@file        purchase-submit.php 
+ * @brief      Script connects to database and saves the product 
+ *             purchased by the user. 
+ * 
+ * @author     Talia Deckardt
+ */ 
 require 'login.php';
 
     $conn = new mysqli($servername, $username, $password, $dbname);
@@ -20,6 +26,10 @@ require 'login.php';
     $realstring = $conn->real_escape_string($pstring);
     update_purchase($conn, $username, $realstring);
 
+    echo '<!DOCTYPE html> <html> <body>';
+    get_purchaseList($pstring);
+    echo '</body></html>';
+
     function update_purchase($conn, $un, $rstr)
     {
     $sql = "UPDATE Users SET purchases=('$rstr') WHERE username='$un'";
@@ -29,5 +39,16 @@ require 'login.php';
     } else {
     echo "Error: " . $sql . "<br>" . $conn->error;
     }
+    }
+
+    
+    function get_purchaseList($parr){
+        $test=unserialize($parr);
+        var_dump($test);    
+    }
+
+    function push_purchase($parr){
+        $temp=unserialize($parr);
+        array_push($test, );    
     }
 ?>
