@@ -45,7 +45,7 @@
     <div class="container-fluid">
         <div class="card-columns d-flex flex-row justify-content-center">
             <!--Left Card to creates Products-->
-            <div class="card bg-info text-light" id="left-card" style="max-width:22% ">
+            <div class="card bg-info text-light" id="left-card" style="min-width:22%">
                 <div class="card-header">
                 <br>
                     <h2> <i class="fas fa-pencil-ruler" style="margin:3%"></i>Create Product</h2>
@@ -88,7 +88,7 @@
         
 
         <!--Right Card displaying Products from db-->
-        <div class="card d-flex bg-light justify-content-center" id="right-card" style="min-width: 1100px;max_width:78%; padding: 3.5%" >
+        <div class="card d-flex bg-light justify-content-center" id="right-card" style="max_width:80%; padding: 3.5%" >
             <div class="card-head">
                 <br> <br>
                 <h1 class="text-center"> Welcome back, Admin! </h1>
