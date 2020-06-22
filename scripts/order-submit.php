@@ -14,6 +14,7 @@ require 'login.php';
     $order_amount = 1;
     $today = date("Y-m-d");
     $product_name = $_POST['product_name'];
+    $product_price = $_POST['product_price'];
     
 
     if (isset($_SESSION['username']))
@@ -24,15 +25,15 @@ require 'login.php';
     else $loggedin = FALSE;
 
 
-    update_orders($conn, $product_id, $product_name, $username, $order_amount, $today);
+    update_orders($conn, $product_id, $product_name, $product_price, $username, $order_amount, $today);
     update_individual_amount($conn, $product_id, $order_amount);
  
 /** @fn 'Update Orders' 
  * @brief Add new Order to table 'Orders' for individual user
  */
-    function update_orders($conn, $pid, $pn, $un, $oa, $td)
+    function update_orders($conn, $pid, $pn, $pp, $un, $oa, $td)
     {
-    $sql = "INSERT INTO Orders (product_id, product_name ,username, order_amount, order_date) VALUES ('$pid','$pn','$un','$oa', '$td')";
+    $sql = "INSERT INTO Orders (product_id, product_name,product_price ,username, order_amount, order_date) VALUES ('$pid','$pn','$pp','$un','$oa', '$td')";
         if ($conn->query($sql) === TRUE) {
         echo "New Order sent.";
         } else {

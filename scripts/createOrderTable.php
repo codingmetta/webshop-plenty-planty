@@ -34,6 +34,7 @@ $sql = "CREATE TABLE Orders (
   order_id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
   product_id INT(6) UNSIGNED,
   product_name VARCHAR(30),
+  product_price FLOAT(50),
   username VARCHAR(50) NOT NULL,
   order_amount INT(6),
   review VARCHAR(1000),
