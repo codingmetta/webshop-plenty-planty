@@ -24,7 +24,7 @@ else $loggedin = FALSE;
 <body>
 
 <!--Right Card displaying Products from db-->
-    <div class="card d-flex bg-light justify-content-center" id="right-card" style="min-width: 1100px;max_width:78%; padding: 3.5%" >
+    <div class="card d-flex bg-light justify-content-center" id="right-card" style="max_width:78%; padding: 3.5%" >
         <div class="card-head">
             <br> <br>
             <h1 class="text-center"> Welcome back <?php echo $loggeduser; ?>!</h1>
@@ -36,6 +36,7 @@ else $loggedin = FALSE;
             <table class="table table-striped table-bordered" id="productList">
                 <thead> 
                     <tr>
+                        <th>Order ID</th>
                         <th>Productname</th>
                         <th>Price in € p.P.</th>
                         <th>Ordered Amount</th>
@@ -49,7 +50,7 @@ else $loggedin = FALSE;
 
                 $conn = new mysqli($servername, $username, $password, $dbname);
                                 
-                $sql = "SELECT product_name, product_price, order_amount, review, order_date FROM Orders WHERE username='$loggeduser'";
+                $sql = "SELECT order_id, product_name, product_price, order_amount, review, order_date FROM Orders WHERE username='$loggeduser'";
                 $result = $conn->query($sql);
                 ?>
                 <tbody>
@@ -57,13 +58,14 @@ else $loggedin = FALSE;
 
                 if ($result->num_rows > 0) {
                     while($row = mysqli_fetch_array($result)) {
-                        echo " <tr>
-                        <td>" . $row[0] .  "</td>
-                        <td>" . $row[1] .  "</td>
-                        <td>" . $row[2] .  "</td>
-                        <td>" . $row[3] .  "</td>
-                        <td>" . $row[4] .  "</td>
-                        <tr>";
+                        echo ' <tr>
+                        <td><a href="review.php">' . $row[0] .  '</a></td>
+                        <td>' . $row[1] .  '</td>
+                        <td>' . $row[2] .  '</td>
+                        <td>' . $row[3] .  '</td>
+                        <td>' . $row[4] .  '</td>
+                        <td>' . $row[5] .  '</td>
+                        <tr>';
                     } 
                 } else {
                     echo "0 results";
