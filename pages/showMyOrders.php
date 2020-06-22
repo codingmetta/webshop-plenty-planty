@@ -3,7 +3,7 @@ session_start();
 
 if (isset($_SESSION['username']))
 {
-    $username = $_SESSION['username'];
+    $loggeduser = $_SESSION['username'];
     $loggedin = TRUE;
     $role     = $_SESSION['role'];
 }
@@ -31,7 +31,7 @@ else $loggedin = FALSE;
         </div>
         <div class="card-body">
             <br> 
-            <h3><i class="fas fa-th-list" style="margin:1%"></i>  Your Orders </h3>
+            <h3><i class="fas fa-shopping-cart" style="margin:1%"></i>  Your Orders </h3>
             <br>
             <table class="table table-striped table-bordered" id="productList">
                 <thead> 
@@ -39,6 +39,7 @@ else $loggedin = FALSE;
                         <th>Productname</th>
                         <th>Price in € p.P.</th>
                         <th>Ordered Amount</th>
+                        <th>Review</th>
                         <th>Date of Order</th>
                     </tr>
                 </thead>
@@ -47,30 +48,21 @@ else $loggedin = FALSE;
                 require '../scripts/login.php';
 
                 $conn = new mysqli($servername, $username, $password, $dbname);
-
-                $sql = "SELECT name, price FROM Products";
+                                
+                $sql = "SELECT product_name, product_price, order_amount, review, order_date FROM Orders WHERE username='$loggeduser'";
                 $result = $conn->query($sql);
                 ?>
                 <tbody>
                 <?php
+
                 if ($result->num_rows > 0) {
                     while($row = mysqli_fetch_array($result)) {
-                        echo "<tr> 
+                        echo " <tr>
                         <td>" . $row[0] .  "</td>
                         <td>" . $row[1] .  "</td>
-                        ";
-                    }
-                } else {
-                    echo "0 results";
-                }
-                
-                $sql = "SELECT order_amount, order_date FROM Orders WHERE username='$username'";
-                $result = $conn->query($sql);
-                if ($result->num_rows > 0) {
-                    while($row = mysqli_fetch_array($result)) {
-                        echo " 
-                        <td>" . $row[0] .  "</td>
-                        <td>" . $row[1] .  "</td>
+                        <td>" . $row[2] .  "</td>
+                        <td>" . $row[3] .  "</td>
+                        <td>" . $row[4] .  "</td>
                         <tr>";
                     } 
                 } else {
