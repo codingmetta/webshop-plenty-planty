@@ -27,7 +27,7 @@ else $loggedin = FALSE;
     <div class="card d-flex bg-light justify-content-center" id="right-card" style="min-width: 1100px;max_width:78%; padding: 3.5%" >
         <div class="card-head">
             <br> <br>
-            <h1 class="text-center"> Welcome back! </h1>
+            <h1 class="text-center"> Welcome back <?php echo $loggeduser; ?>!</h1>
         </div>
         <div class="card-body">
             <br> 
