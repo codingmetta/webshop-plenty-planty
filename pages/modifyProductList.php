@@ -30,7 +30,7 @@
       <a class="nav-link" href="modifyProductList.php">Products</a>
     </li>
      <li class="nav-item">
-      <a class="nav-link" href="modifyUserList.php">Users</a>
+      <a class="nav-link" href="modifyUserList.php">Costumers</a>
     </li>
   </ul>
         <ul class="navbar-nav navbar-right">

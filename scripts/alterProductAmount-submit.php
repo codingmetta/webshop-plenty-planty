@@ -14,7 +14,20 @@ if ($conn->connect_error) {
 $newamount= $_POST['newamount'];
 $product_id= $_POST['pid'];
 
-update_amount($conn, $product_id, $newamount);
+
+session_start();
+    if (isset($_SESSION['username']))
+    {
+        $loggedin = TRUE;
+        $role = $_SESSION['role'];
+    }
+    else $loggedin = FALSE;
+
+    if ($loggedin && $role='admin'){
+        update_amount($conn, $product_id, $newamount);
+    } else {
+        echo "Restricted area. Please <a href='../index.php'>click here</a> to go back to the Homepage.";
+    }
 
 /** @fn 'Update Product Amount' 
  * @brief Updates Amount  'Admin' to table 'Users'

@@ -12,7 +12,19 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 
 $delete= $_POST['remove'];
 
-delete_user($conn, $delete);
+session_start();
+    if (isset($_SESSION['username']))
+    {
+        $loggedin = TRUE;
+        $role = $_SESSION['role'];
+    }
+    else $loggedin = FALSE;
+
+    if ($loggedin && $role='admin'){
+        delete_user($conn, $delete);
+    } else {
+        echo "Restricted area. Please <a href='../index.php'>click here</a> to go back to the Homepage.";
+    }
 
 
 /** @fn     'Delete Product' 

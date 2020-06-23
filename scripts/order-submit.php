@@ -21,12 +21,16 @@ require 'login.php';
     {
         $username = $_SESSION['username'];
         $loggedin = TRUE;
+        $role = $_SESSION['role'];
     }
     else $loggedin = FALSE;
 
-
-    update_orders($conn, $product_id, $product_name, $product_price, $username, $order_amount, $today);
-    update_individual_amount($conn, $product_id, $order_amount);
+    if ($loggedin && $role='user'){
+         update_orders($conn, $product_id, $product_name, $product_price, $username, $order_amount, $today);
+         update_individual_amount($conn, $product_id, $order_amount); 
+    } else {
+        echo "Log in to order a product.";
+    }
  
 /** @fn 'Update Orders' 
  * @brief Add new Order to table 'Orders' for individual user
