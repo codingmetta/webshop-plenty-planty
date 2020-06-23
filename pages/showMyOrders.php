@@ -76,6 +76,23 @@ else $loggedin = FALSE;
             </table>
             <br>
             <hr>
+
+                    <div id="review-group" class="card text-white bg-secondary  p-2" style="max-width: 40%">
+                        <div class="card-header">
+                        <h5> Review your Order </h5>       
+                        </div>
+                        <div class="card-body">
+                            <form name= "alterProductReview" action="../scripts/alterProductReview-submit.php" method="post">
+                            <label for="order_id">
+                            <input type="text" placeholder="Order ID" name="order_id" required>
+                            </label> 
+                            <p style="text-size: 6px">Was the ordered product as described? Tell us!</p>
+                            <textarea type="text" name="review" id="review" rows="5" cols="42" style="" required>
+                            </textarea>                           
+                            <button type="submit" class="btn btn-block btn-primary"><i class="fas fa-sync-alt" style="margin:2%"></i> Send </button>
+                            </form>
+                        </div>
+                    </div>
         </div>
     </div>
 </body>
