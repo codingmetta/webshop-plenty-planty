@@ -81,7 +81,7 @@
                 '<a class="nav-link" href="pages/modifyProductList.php">Products</a>' .
                 '</li>' .
                 '<li class="nav-item">' .
-                '<a class="nav-link" href="#">Users</a>' .
+                '<a class="nav-link" href="pages/modifyUserList.php">Costumers</a>' .
                 '</li>'.
             '</ul>' .
             '<ul class="navbar-nav navbar-right">' .

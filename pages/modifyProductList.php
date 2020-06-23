@@ -30,7 +30,7 @@
       <a class="nav-link" href="modifyProductList.php">Products</a>
     </li>
      <li class="nav-item">
-      <a class="nav-link" href="#">Users</a>
+      <a class="nav-link" href="modifyUserList.php">Users</a>
     </li>
   </ul>
         <ul class="navbar-nav navbar-right">
@@ -45,7 +45,7 @@
     <div class="container-fluid">
         <div class="card-columns d-flex flex-row justify-content-center">
             <!--Left Card to creates Products-->
-            <div class="card bg-info text-light" id="left-card" style="min-width:22%">
+            <div class="card bg-info text-light" id="left-card" style="max-width:22%">
                 <div class="card-header">
                 <br>
                     <h2> <i class="fas fa-pencil-ruler" style="margin:3%"></i>Create Product</h2>
