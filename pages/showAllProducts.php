@@ -53,9 +53,17 @@
             <a class="nav-link" href="#">Contact</a>
         </li>
     </ul>
+    <script>
+        $(function() {
 
+        $( "#search" ).autocomplete({
+                    source:'../scripts/jquery-mysql.php',
+            })
+
+        });
+    </script>
     <form class="form-inline my-2 my-lg-0">
-        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+        <input class="form-control mr-sm-2" id="search" type="search" placeholder="Search" aria-label="Search">
         <button class="btn btn-outline-secondary my-2 my-sm-0" type="submit">Search</button>
     </form>
 
