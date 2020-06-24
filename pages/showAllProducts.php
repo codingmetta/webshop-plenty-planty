@@ -1,4 +1,5 @@
 <?php
+    require '../scripts/popover.php';
     session_start();
 
     if (isset($_SESSION['username']))
@@ -22,6 +23,69 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 </head>
 <body>
+<script>
+    $(document).ready(function(){
+        /*WORKS
+        $('[data-toggle="popover"]').popover({
+            "html":true,
+            "content": "<p>hello</p>"
+        });*/
+        /*WORKS
+         $('[data-toggle="popover"]').popover({
+            "html":true,
+            "content": function(){
+                let string="ok";
+                return string;
+            }
+        });*/
+
+
+
+        $('[data-toggle="popover"]').popover({
+            "html":true,
+            "content": function(){
+                return details();
+            }
+        });
+
+/*
+        $('[data-toggle="popover"]').popover({
+        "html":true,
+        "content":$.get({
+            url: '../scripts/popover.php',
+            });
+        });
+
+    });
+*/
+/*
+$('[data-toggle="popover"]').popover({
+"html":true,
+"content": $.get("../scripts/popover.php", function(data, status){
+    alert("Data: " + data + "\nStatus: " + status);
+  });
+});
+*/
+/*
+$('[data-toggle="popover"]').popover({
+"html":true,
+"content": $.post("../scripts/popover.php", function(data, status){
+    alert("Data: " + data + "\nStatus: " + status);
+  });
+});
+*/
+});
+
+function details(){
+    //$.get('../scripts/popover.php');
+    let string='supi';
+    return string;
+}
+
+
+
+</script>
+
 
 <!-- A grey horizontal navbar that becomes vertical on small screens -->
 <nav class="navbar fixed-top navbar-expand-lg bg-light navbar-light">
@@ -133,15 +197,22 @@ while( $record = mysqli_fetch_assoc($resultset) ) {
         <div class="desc">
             <?php echo $record['description']; ?>
         </div>
+
+
+
         <!-- Placeholder only! Implementation for rating system not done yet -->
         <div class="rating d-flex justify-content-end">
-            <ul class="row rating" style="list-style-type:none; margin-right:2%">
+            <ul class="row rating" style="list-style-type:none; margin-right:2%; margin-top:4%; margin-bottom: -1.5%">
                 <li><i class="far fa-star"></i></li>
                 <li><i class="far fa-star"></i></li>
                 <li><i class="far fa-star"></i></li>
                 <li><i class="far fa-star"></i></li>
                 <li><i class="far fa-star"></i></li>
             </ul> 
+        </div>
+        <div class="container  d-flex  justify-content-end">
+            <a href="#" id="review-popup" data-toggle="popover" data-trigger="focus" title="Reviews">Reviews</a>
+            <!--            <a href="#" data-poload="../scripts/showProductReview.php" data-trigger="focus"  data-content="Some content inside the popover" title="Reviews">Reviews</a>-->
         </div>
     </div>
     

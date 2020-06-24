@@ -31,6 +31,7 @@
                 ?>
                 <tbody>
                 <?php
+                
                 if ($result->num_rows > 0) {
                     while($row = mysqli_fetch_array($result)) {
      
@@ -42,13 +43,6 @@
                 } else {
                     echo "0 results";
                 }
-            
-                    /*
-                    for ($i=0; $i < count($row); $i++){
-                        echo $row[$i];
-                    } */
-                            
-                             // print_r($row);
                         
 
                 $conn->close();
