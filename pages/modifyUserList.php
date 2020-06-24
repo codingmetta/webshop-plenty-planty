@@ -9,11 +9,6 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <style>
-    #delete-group {margin:25px;}
-    #update-group {margin:25px;}
-   
-    </style>
 </head>
 
 <body>
@@ -32,10 +27,10 @@
      <li class="nav-item active">
       <a class="nav-link" href="modifyUserList.php">Costumers</a>
     </li>
-  </ul>
-        <ul class="navbar-nav navbar-right">
+    </ul>
+    <ul class="navbar-nav navbar-right">
         <li class="nav-item ">
-        <a class="nav-link text-danger" href="../scripts/destroySession.php"> Log Out</a></li>
+        <a class="nav-link text-danger" href="../scripts/destroySession.php">Log Out</a></li>
     </ul>
 </nav>
 
@@ -72,7 +67,7 @@
                         die("Connection failed: " . $conn->connect_error);
                     } 
 
-                    $sql = "SELECT user_id, forename,surname, username, email FROM Users";
+                    $sql = "SELECT user_id, forename, surname, username, email FROM Users";
                     $result = $conn->query($sql);
 
                     ?>
@@ -98,8 +93,8 @@
                 <br>
                 <hr>
 
+                <!--Card/Section where Admin can Remove an user from db-->
                 <div class="d-flex flex-row justify-content-end">
-                
                     <div id="remove-group" class="card text-white bg-dark p-2" style="max-width: 25%" >
                         <div class="card-header">
                             <h5> Remove Costumer </h5>

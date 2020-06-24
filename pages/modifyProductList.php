@@ -12,11 +12,11 @@
     <style>
     #delete-group {margin:25px;}
     #update-group {margin:25px;}
-   
     </style>
 </head>
 
 <body>
+<!-- Navigation Bar-->
 <nav class="navbar fixed-top navbar-expand-lg bg-light navbar-light">
   <a class="navbar-brand" href="../index.php">Plenty</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -32,26 +32,27 @@
      <li class="nav-item">
       <a class="nav-link" href="modifyUserList.php">Costumers</a>
     </li>
-  </ul>
-        <ul class="navbar-nav navbar-right">
+    </ul>
+    <ul class="navbar-nav navbar-right">
         <li class="nav-item ">
         <a class="nav-link text-danger" href="../scripts/destroySession.php"> Log Out</a></li>
     </ul>
 </nav>
-
-
-    <br> <br>
+<br> <br>
 
     <div class="container-fluid">
         <div class="card-columns d-flex flex-row justify-content-center">
-            <!--Left Card to creates Products-->
+
+            <!--Left Card to create new Products in Stock-->
             <div class="card bg-info text-light" id="left-card" style="max-width:22%">
+
                 <div class="card-header">
                 <br>
                     <h2> <i class="fas fa-pencil-ruler" style="margin:3%"></i>Create Product</h2>
                         <br>
                         <p>Please fill out these fields to create a new product.</p>
                 </div>
+
                 <div class="card-body">
                     <form name= "form" action="../scripts/createProduct-submit.php" method="post">
                         <br>  
@@ -82,12 +83,13 @@
                         <button type="submit" class="btn btn-block btn-dark"><i class="fas fa-plus" style="margin:2%"></i>  Add Product</button>
                     </form>
                 </div>
+
             </div>
         <div>
 
         
 
-        <!--Right Card displaying Products from db-->
+        <!--Right Card displaying Products in Stock from in a table-->
         <div class="card d-flex bg-light justify-content-center" id="right-card" style="max_width:80%; padding: 3.5%" >
             <div class="card-head">
                 <br> <br>
@@ -141,6 +143,7 @@
                 <hr>
 
                 <div class="d-flex flex-row justify-content-between">
+                    <!--Card where Amount in Stock can be updated by admin -->
                     <div id="update-group" class="card text-white bg-secondary  p-2" style="max-width: 40%">
                         <div class="card-header">
                         <h5> Update Product Amount in Stock </h5>       
@@ -156,7 +159,8 @@
                             </form>
                         </div>
                     </div>
-                
+
+                    <!--Card where Products can be deleted by admin-->
                     <div id="delete-group" class="card text-white bg-dark p-2" style="max-width: 25%" >
                         <div class="card-header">
                             <h5> Delete Product </h5>
@@ -167,7 +171,7 @@
                             <form name= "deleteProduct" action="../scripts/deleteProduct-submit.php" method="post">
                             <input type="text" placeholder="Product ID" name="delete" id="delete" required></label>
                        
-                        <br> <br> <br> <hr> <br>
+                            <br> <br> <br> <hr> <br>
                             <button type="submit" class="btn btn-danger btn-block"><i class="fas fa-trash-alt" style="margin:2%"></i> Delete </button>
                             </form>
                         </div>

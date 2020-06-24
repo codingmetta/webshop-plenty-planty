@@ -7,71 +7,74 @@
  */ 
 require 'login.php';
 
-    $conn = new mysqli($servername, $username, $password, $dbname);
-    session_start();
+session_start();
+if (isset($_SESSION['username']))
+{
+    $username = $_SESSION['username'];
+    $loggedin = TRUE;
+    $role = $_SESSION['role'];
+}
+else $loggedin = FALSE;
 
-    $product_id = $_POST['product_id'];
-    $order_amount = 1;
-    $today = date("Y-m-d");
-    $product_name = $_POST['product_name'];
-    $product_price = $_POST['product_price'];
-    
+$conn = new mysqli($servername, $username, $password, $dbname);
 
-    if (isset($_SESSION['username']))
-    {
-        $username = $_SESSION['username'];
-        $loggedin = TRUE;
-        $role = $_SESSION['role'];
-    }
-    else $loggedin = FALSE;
+//Fetch submitted data
+$product_id = $_POST['product_id'];
+$order_amount = 1;
+$today = date("Y-m-d");
+$product_name = $_POST['product_name'];
+$product_price = $_POST['product_price'];
 
-    if ($loggedin && $role='user'){
-         update_orders($conn, $product_id, $product_name, $product_price, $username, $order_amount, $today);
-         update_individual_amount($conn, $product_id, $order_amount); 
-    } else {
-        echo "Log in to order a product.";
-    }
+
+//Check if the registered user has the role 'user'
+if ($loggedin && $role='user'){
+        update_orders($conn, $product_id, $product_name, $product_price, $username, $order_amount, $today);
+        update_individual_amount($conn, $product_id, $order_amount); 
+} else {
+//Attempt fails when user is not registered
+    echo "Please <a href='../pages/loginUser.php'>Log In</a> to order a product.";
+}
  
 /** @fn 'Update Orders' 
- * @brief Add new Order to table 'Orders' for individual user
- */
-    function update_orders($conn, $pid, $pn, $pp, $un, $oa, $td)
-    {
-    $sql = "INSERT INTO Orders (product_id, product_name,product_price ,username, order_amount, order_date) VALUES ('$pid','$pn','$pp','$un','$oa', '$td')";
-        if ($conn->query($sql) === TRUE) {
-        echo "New Order sent.";
-        } else {
+* @brief Add new Order to table 'Orders' for individual user
+*/
+function update_orders($conn, $pid, $pn, $pp, $un, $oa, $td) {
+
+    $sql = "INSERT INTO Orders (product_id, product_name, product_price ,username, order_amount, order_date) VALUES ('$pid','$pn','$pp','$un','$oa', '$td')";
+    
+    if ($conn->query($sql) === TRUE) {
+        echo "New Order sent.Go back to <a href='../pages/showAllProducts.php'>our Products</a>.";
+    } else {
         echo "Error: " . $sql . "<br>" . $conn->error;
-        }
     }
+}
 
 /** @fn 'Update Product Amount' 
- * @brief Updates Amount  'Admin' to table 'Users'
+ * @brief Updates Amount of a Product in Stock after an Order by a user
  */
-function update_individual_amount($conn, $pid, $nam)
-{
+function update_individual_amount($conn, $pid, $nam){
 
+    //get old amount
     $query = "SELECT amount FROM Products WHERE product_id='$pid'";
     $result = $conn->query($query);
 
     if ($result->num_rows > 0) {
-    while($row = $result->fetch_assoc()) {
+        while($row = $result->fetch_assoc()) {
         $old_amount =$row["amount"];
-    }
+        }
     } else {
-    echo "0 results";
+        echo "0 results";
     }
-    
+
+    //calculate new amount
     $new_amount = $old_amount-$nam;
     
+    //push updated amount to column 'amount' in table 'Products'
     $sql = "UPDATE Products SET amount='$new_amount' WHERE product_id='$pid'";
     if ($conn->query($sql) === TRUE) {
-    echo "Product Amount successfully updated.";
+        echo "";
     } else {
-    echo "Error: " . $sql . "<br>" . $conn->error;
+        echo "Error: " . $sql . "<br>" . $conn->error;
     }
 }
-
-
-
 ?>

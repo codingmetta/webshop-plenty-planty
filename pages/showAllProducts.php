@@ -23,31 +23,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 </head>
 <body>
+<!-- Not working yet: jQuery Script trying to fetch reviews from products by ajax call-->
 <script>
     $(document).ready(function(){
-        /*WORKS
-        $('[data-toggle="popover"]').popover({
-            "html":true,
-            "content": "<p>hello</p>"
-        });*/
-        /*WORKS
-         $('[data-toggle="popover"]').popover({
-            "html":true,
-            "content": function(){
-                let string="ok";
-                return string;
-            }
-        });*/
-
-
-
         $('[data-toggle="popover"]').popover({
             "html":true,
             "content": function(){
                 return details();
             }
         });
-
 /*
         $('[data-toggle="popover"]').popover({
         "html":true,
@@ -81,9 +65,6 @@ function details(){
     let string='supi';
     return string;
 }
-
-
-
 </script>
 
 
@@ -94,7 +75,7 @@ function details(){
     <span class="navbar-toggler-icon"></span>
     </button>
 
-  <!-- Links -->
+<!-- Links -->
 <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
         <li class="nav-item">
@@ -117,17 +98,39 @@ function details(){
             <a class="nav-link" href="#">Contact</a>
         </li>
     </ul>
-    <script>
-        $(function() {
 
-        $( "#search" ).autocomplete({
+
+    <!--NOT WORKING YET: Trying to implement a dynamic search for products-->
+    <script>
+    /*
+        $(function() {
+        $("#search").autocomplete({
                     source:'../scripts/jquery-mysql.php',
             })
-
         });
+    */
+
+    /*    
+    function showHint(str){
+        if (str.length == 0) { 
+        document.getElementById("txtHint").innerHTML = "";
+        return;
+        } else {
+        var xmlhttp = new XMLHttpRequest();
+        xmlhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+            document.getElementById("txtHint").innerHTML = this.responseText;
+            }
+        };
+        xmlhttp.open("GET", "gethint.php?q=" + str, true);
+        xmlhttp.send();
+        }
+    }
+    */
     </script>
-    <form class="form-inline my-2 my-lg-0">
-        <input class="form-control mr-sm-2" id="search" type="search" placeholder="Search" aria-label="Search">
+    <form action="" class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" id="search" type="search" onsearch="showHint(this.value)" placeholder="Search" aria-label="Search">
+        <!--<p>Suggestions: <span id="txtHint"></span></p>-->
         <button class="btn btn-outline-secondary my-2 my-sm-0" type="submit">Search</button>
     </form>
 
@@ -160,13 +163,14 @@ function details(){
 ?>
 </nav>
 <br> <br><br> 
-<!--Products listed as responsive Cards retrieved from table "Products"  -->
+
+<!--***Products listed as responsive cards retrieved from table 'Products'***-->
 <div class="container">
 <div class="card-columns">
 
 <?php
 require '../scripts/login.php';
-// Create connection
+//Create Connection to DB
 $conn = new mysqli($servername, $username, $password, $dbname);
 
 // Check connection
@@ -174,6 +178,7 @@ if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 } 
 
+//Query fetches data as associated array and individual cards for products are created
 $sql = "SELECT name, price, description, amount, img_path, product_id FROM Products";
 $resultset = mysqli_query($conn, $sql) or die("database error:". mysqli_error($conn));
 while( $record = mysqli_fetch_assoc($resultset) ) {
@@ -199,8 +204,7 @@ while( $record = mysqli_fetch_assoc($resultset) ) {
         </div>
 
 
-
-        <!-- Placeholder only! Implementation for rating system not done yet -->
+        <!-- Placeholding implementation for rating system -->
         <div class="rating d-flex justify-content-end">
             <ul class="row rating" style="list-style-type:none; margin-right:2%; margin-top:4%; margin-bottom: -1.5%">
                 <li><i class="far fa-star"></i></li>
@@ -212,10 +216,10 @@ while( $record = mysqli_fetch_assoc($resultset) ) {
         </div>
         <div class="container  d-flex  justify-content-end">
             <a href="#" id="review-popup" data-toggle="popover" data-trigger="focus" title="Reviews">Reviews</a>
-            <!--            <a href="#" data-poload="../scripts/showProductReview.php" data-trigger="focus"  data-content="Some content inside the popover" title="Reviews">Reviews</a>-->
         </div>
     </div>
     
+    <!-- Data hidden submitted to php script to make a purchase and update product amount in stock-->
     <div class="card-footer">
         <div class="d-flex justify-content-between" style="display:flex">
             <div class="desc" id="btn-buy">
