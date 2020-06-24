@@ -58,8 +58,16 @@ else $loggedin = FALSE;
 
                 if ($result->num_rows > 0) {
                     while($row = mysqli_fetch_array($result)) {
-                        echo ' <tr>
+                        /*            echo ' <tr>
                         <td><a href="review.php">' . $row[0] .  '</a></td>
+                        <td>' . $row[1] .  '</td>
+                        <td>' . $row[2] .  '</td>
+                        <td>' . $row[3] .  '</td>
+                        <td>' . $row[4] .  '</td>
+                        <td>' . $row[5] .  '</td>
+                        <tr>';*/
+                        echo ' <tr>
+                        <td>' . $row[0] .  '</td>
                         <td>' . $row[1] .  '</td>
                         <td>' . $row[2] .  '</td>
                         <td>' . $row[3] .  '</td>
