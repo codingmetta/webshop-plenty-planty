@@ -130,18 +130,37 @@
                 '<div class="carousel-inner">' .
                     '<div class="carousel-item active">' .
                     '<img src="img/car-man.jpg"  class="d-block w-100" alt="Man sniffs a flower" >' .
+                    '<div class="carousel-caption" style="position:absolute; top:15%; right: 5% ; font-size: 650%; text-align:right">' .
+                    '<p>For real <br>plant lovers</p>' .
                     '</div>' .
-                        '<div class="carousel-item">' .
-                    '<img src="img/car-laptop.jpg" class="d-block w-100" alt="Woman doing Homeoffice" >' .
                     '</div>' .
-                    '<div class="carousel-item">' .
-                    '<img src="img/car-women.jpg" class="d-block w-100" alt="Women talking to each other on a couch" >' .
-                    '</div>' .
+
                     '<div class="carousel-item">' .
                     '<img src="img/car-boy.jpg" class="d-block w-100"  alt="A Child holding a plant">' .
+                    '<div class="carousel-caption" style="position:absolute; top:10%; left: 4% ; font-size: 650%; text-align:left">' .
+                    '<p>For small<br> beginnings</p>' .
                     '</div>' .
-                        '<div class="carousel-item">' .
+                    '</div>' .
+
+                    '<div class="carousel-item">' .
+                    '<img src="img/car-laptop.jpg" class="d-block w-100" alt="Woman doing Homeoffice" >' .
+                    '<div class="carousel-caption" style="position:absolute; top:12%; right: 5% ; font-size: 650%; text-align:right">' .
+                    '<p>For your <br>home office</p>' .
+                    '</div>' .
+                    '</div>' .
+                    
+                    '<div class="carousel-item">' .
+                    '<img src="img/car-women.jpg" class="d-block w-100" alt="Women talking to each other on a couch" >' .
+                    '<div class="carousel-caption" style="position:absolute; top:12%; left: 4% ; font-size: 650%; text-align:left">' .
+                    '<p>For your <br>urban jungle</p>' .
+                    '</div>' .
+                    '</div>' .
+
+                    '<div class="carousel-item">' .
                     '<img src="img/car-wooden.jpg" class="d-block w-100" alt="A Cat on a wooden shelf" >' .
+                    '<div class="carousel-caption" style="position:absolute; top:15%; right: 5% ; font-size: 650%; text-align:right">' .
+                    '<p>For your <br>furry friends</p>' .
+                    '</div>' .
                     '</div>' .
                 '</div>' .
                 '</div>' .
