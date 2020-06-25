@@ -21,7 +21,12 @@
         <div class="card-body">
         <table class="table table-striped table-bordered" id="productList">
 
-        <?php 
+        <?php
+        /**@file       showProductReview.php
+        * @brief      Shows Review from certain user
+        *
+        * @author     Talia Deckardt
+        */ 
         require 'login.php';
 
         $conn = new mysqli($servername, $username, $password, $dbname);
