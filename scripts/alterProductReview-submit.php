@@ -1,6 +1,7 @@
 <?php 
 /**@file        alterProductReview-submit.php
- * @brief      Script connects to database and alters the review of an order by its id
+ * @brief      Script connects to database and alters the review of an order 
+ *             made by a user by its id
  *
  * @author     Talia Deckardt
  */
@@ -20,6 +21,7 @@ session_start();
     }
     else $loggedin = FALSE;
 
+    //Script checks if user is loggedin and has role 'user' to review an already ordered product
     if ($loggedin && $role='user'){
         update_review($conn, $order_id, $review);
     } else {

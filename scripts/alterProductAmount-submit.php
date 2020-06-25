@@ -16,30 +16,30 @@ $product_id= $_POST['pid'];
 
 
 session_start();
-    if (isset($_SESSION['username']))
-    {
-        $loggedin = TRUE;
-        $role = $_SESSION['role'];
-    }
-    else $loggedin = FALSE;
+if (isset($_SESSION['username']))
+{
+    $loggedin = TRUE;
+    $role = $_SESSION['role'];
+}
+else $loggedin = FALSE;
 
-    if ($loggedin && $role='admin'){
-        update_amount($conn, $product_id, $newamount);
-    } else {
-        echo "Restricted area. Please <a href='../index.php'>click here</a> to go back to the Homepage.";
-    }
+//Amount of a Product only is updated when current user is admin
+if ($loggedin && $role='admin'){
+    update_amount($conn, $product_id, $newamount);
+} else {
+    echo "Restricted area. Please <a href='../index.php'>click here</a> to go back to the Homepage.";
+}
 
 /** @fn 'Update Product Amount' 
  * @brief Updates Amount  'Admin' to table 'Users'
  */
-function update_amount($conn, $pid, $nam)
-{
-$sql = "UPDATE Products SET amount='$nam' WHERE product_id='$pid'";
-if ($conn->query($sql) === TRUE) {
-  echo "Product Amount successfully updated.";
-} else {
-  echo "Error: " . $sql . "<br>" . $conn->error;
-}
+function update_amount($conn, $pid, $nam) {
+    $sql = "UPDATE Products SET amount='$nam' WHERE product_id='$pid'";
+    if ($conn->query($sql) === TRUE) {
+    echo "Product Amount successfully updated.";
+    } else {
+    echo "Error: " . $sql . "<br>" . $conn->error;
+    }
 }
 
  ?>

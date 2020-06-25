@@ -11,42 +11,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 </head>
 <body>
-
-<!--Right Card displaying Products from db-->
-    <div class="card d-flex bg-light justify-content-center" id="right-card" style="max_width:78%; padding: 3.5%" >
+<!--Card displaying Reviews from certain Products-->
+    <div class="card d-flex bg-light justify-content-center" id="review-card" style="max_width:78%; padding: 3.5%" >
         <div class="card-head">
             <br> <br>
             <h1 class="text-center"> Reviews</h1>
         </div>
+        
         <div class="card-body">
         <table class="table table-striped table-bordered" id="productList">
 
-                <?php
-                require 'login.php';
+        <?php 
+        require 'login.php';
 
-                $conn = new mysqli($servername, $username, $password, $dbname);
-                                
-                $sql = "SELECT review FROM Orders INNER JOIN Products ON Orders.product_name= Products.name WHERE review IS NOT NULL";
-                $result = $conn->query($sql);
-                ?>
-                <tbody>
-                <?php
+        $conn = new mysqli($servername, $username, $password, $dbname);
+        //Query to get all reviews for one product that has already been ordered                
+        $sql = "SELECT review FROM Orders INNER JOIN Products ON Orders.product_name= Products.name WHERE review IS NOT NULL";
+        $result = $conn->query($sql);
+        ?>
+        <tbody>
+        <?php
+        
+        if ($result->num_rows > 0) {
+            while($row = mysqli_fetch_array($result)) {
+
+                echo ' <tr>
+                <td>"' . $row[0] .  '"</td>
+                <tr>';
                 
-                if ($result->num_rows > 0) {
-                    while($row = mysqli_fetch_array($result)) {
-     
-                        echo ' <tr>
-                        <td>"' . $row[0] .  '"</td>
-                        <tr>';
-                        
-                    } 
-                } else {
-                    echo "0 results";
-                }
-                        
+            } 
+        } else {
+            echo "0 results";
+        }
+                
 
-                $conn->close();
-                ?>
+        $conn->close();
+        ?>
         </div>
     </div>
 </body>
