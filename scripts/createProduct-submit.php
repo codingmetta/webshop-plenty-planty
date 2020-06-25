@@ -40,7 +40,7 @@ function add_product($conn, $pn, $dc, $pr, $am, $ip)
 {
 $sql = "INSERT INTO Products (name, description, price, amount, img_path) VALUES ('$pn','$dc','$pr','$am','$ip')";
 if ($conn->query($sql) === TRUE) {
-  echo "New record successfully added.";
+  echo "New record successfully added. Please <a href='../pages/modifyProductList.php'>click here</a> to go back to the Product Stock";
 } else {
   echo "Error: " . $sql . "<br>" . $conn->error;
 }

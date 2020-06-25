@@ -36,7 +36,7 @@ function delete_product($conn, $del)
 {
 $sql = "DELETE FROM Products WHERE product_id='$del'";
 if ($conn->query($sql) === TRUE) {
-  echo "Product successfully deleted.";
+  echo "Product successfully deleted.Please <a href='../pages/modifyProductList.php'>click here</a> to go back to the Product Stock";
 } else {
   echo "Error: " . $sql . "<br>" . $conn->error;
 }

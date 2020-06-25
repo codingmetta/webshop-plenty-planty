@@ -103,7 +103,7 @@
                             <label for="remove">
                       
                             <form name= "remove" action="../scripts/deleteUser-submit.php" method="post">
-                            <input type="text" placeholder="Costumer ID" name="remove" id="remove" required></label>
+                            <input type="text" placeholder="Username" name="remove" id="remove" required></label>
                        
                             <hr> 
                             <button type="submit" class="btn btn-danger btn-block"><i class="fas fa-trash-alt" style="margin:2%"></i> Remove </button>

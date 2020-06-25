@@ -36,7 +36,7 @@ if ($loggedin && $role='admin'){
 function update_amount($conn, $pid, $nam) {
     $sql = "UPDATE Products SET amount='$nam' WHERE product_id='$pid'";
     if ($conn->query($sql) === TRUE) {
-    echo "Product Amount successfully updated.";
+    echo "Product Amount successfully updated.Please <a href='../pages/modifyProductList.php'>click here</a> to go back to the Product Stock";
     } else {
     echo "Error: " . $sql . "<br>" . $conn->error;
     }

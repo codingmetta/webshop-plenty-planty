@@ -22,6 +22,7 @@ else $loggedin = FALSE;
 
 //Script checks if user is admin and has the permission to delete a user
 if ($loggedin && $role='admin'){
+    delete_user_credentials($conn, $delete);
     delete_user($conn, $delete);
 } else {
     echo "Restricted area. Please <a href='../index.php'>click here</a> to go back to the Homepage.";
@@ -33,11 +34,21 @@ if ($loggedin && $role='admin'){
  */
 function delete_user($conn, $del)
 {
-$sql = "DELETE FROM Users WHERE user_id='$del'";
+$sql = "DELETE FROM Users WHERE username='$del'";
 if ($conn->query($sql) === TRUE) {
-  echo "User successfully deleted.";
+  echo "User successfully deleted.Please <a href='../pages/modifyUserList.php'>click here</a> to reload.";
 } else {
   echo "Error: " . $sql . "<br>" . $conn->error;
+}
+}
+
+function delete_user_credentials($conn, $del)
+{
+$query = "DELETE FROM Orders WHERE username='$del'";
+if ($conn->query($query) === TRUE) {
+  //echo "User successfully deleted.";
+} else {
+  echo "Error: " . $query . "<br>" . $conn->error;
 }
 }
 

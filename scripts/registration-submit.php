@@ -25,7 +25,7 @@ $check_passed = check_password($passw, $repassw);
 
 if ($check_passed){
     add_user($conn, $role, $forename, $surname, $email, $un, $token);
-    echo 'Registered user.';
+    echo 'You successfully signed up. Please <a href="../pages/loginUser.php">click here</a> to log in. ';
 } else {
     echo 'Repeated Password is incorrect. Please try again.';
 }

@@ -146,9 +146,7 @@ else $loggedin = FALSE;
                         <td>' . $row[5] .  '</td>
                         <tr>';
                     } 
-                } else {
-                    echo "0 results";
-                }
+                } 
                 $conn->close();
                 ?>
                 </tbody>

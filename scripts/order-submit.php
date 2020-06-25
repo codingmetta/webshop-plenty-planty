@@ -10,7 +10,7 @@ require 'login.php';
 session_start();
 if (isset($_SESSION['username']))
 {
-    $username = $_SESSION['username'];
+    $usern = $_SESSION['username'];
     $loggedin = TRUE;
     $role = $_SESSION['role'];
 }
@@ -28,7 +28,7 @@ $product_price = $_POST['product_price'];
 
 //Check if the registered user has the role 'user'
 if ($loggedin && $role='user'){
-        update_orders($conn, $product_id, $product_name, $product_price, $username, $order_amount, $today);
+        update_orders($conn, $product_id, $product_name, $product_price, $usern, $order_amount, $today);
         update_individual_amount($conn, $product_id, $order_amount); 
 } else {
 //Attempt fails when user is not registered

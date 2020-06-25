@@ -35,7 +35,7 @@ function update_review($conn, $oid, $rev)
 {
 $sql = "UPDATE Orders SET review='$rev' WHERE order_id='$oid'";
 if ($conn->query($sql) === TRUE) {
-  echo "Product successfully rated.";
+  echo "Thank you for your review.Please <a href='../index.php'>click here</a> to go back to the Homepage.";
 } else {
   echo "Error: " . $sql . "<br>" . $conn->error;
 }
