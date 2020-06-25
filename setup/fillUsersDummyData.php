@@ -6,7 +6,7 @@
  * @author     Talia Deckardt
  */
 
-require_once 'login.php';
+require_once '../scripts/login.php';
 $conn = new mysqli($servername, $username, $password, $dbname);
 
 if ($conn->connect_error) die($conn->connect_error);

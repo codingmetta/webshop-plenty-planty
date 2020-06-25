@@ -5,7 +5,7 @@
  *
  * @author     Talia Deckardt
  */
-require 'login.php';
+require '../scripts/login.php';
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
