@@ -1,4 +1,4 @@
-##webshop-plenty-planty
+## webshop-plenty-planty
 
 1. Call 'localhost:8080/phpmyadmin/' from browser
 2. Create a DB and name it 'plantytest'
