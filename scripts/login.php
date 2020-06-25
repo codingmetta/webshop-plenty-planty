@@ -6,16 +6,16 @@
  *
  * @author     Talia Deckardt
  */
- 
+
 $servername= "localhost";
-$username= "planty-admin";
-$password="Hs1mdAjiQ66EbLWd";
+$username= "root";
+$password="";
 $dbname= "plantytest";
 
 /* 
 $servername= "localhost";
-$username= "root";
-$password="";
+$username= "planty-admin";
+$password="Hs1mdAjiQ66EbLWd";
 $dbname= "plantytest";
 */
 ?>
