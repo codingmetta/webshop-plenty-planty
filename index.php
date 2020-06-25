@@ -65,7 +65,6 @@
                     '</a>' .
                     '<div class="dropdown-menu" aria-labelledby="navbarDropdown">' .
                     '<a class="dropdown-item" href="pages/showMyOrders.php">My Orders</a>'.
-                    '<a class="dropdown-item" href="#">My Reviews</a>' .
                     '</div>' .
                 '</li>'.
                 '<li class="nav-item ">' .
