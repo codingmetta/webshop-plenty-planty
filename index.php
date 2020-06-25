@@ -1,33 +1,31 @@
-<?php // Example 26-2: header.php
-    session_start();
-    echo '<!DOCTYPE html>
-            <html lang="en">';
+<?php 
+session_start();
+echo '<!DOCTYPE html>
+        <html lang="en">';
 
-    //require_once 'functions.php';
+if (isset($_SESSION['username']))
+{
+    $username = $_SESSION['username'];
+    $loggedin = TRUE;
+    $role     = $_SESSION['role'];
+}
+else $loggedin = FALSE;
 
-    if (isset($_SESSION['username']))
-    {
-        $username = $_SESSION['username'];
-        $loggedin = TRUE;
-        $role     = $_SESSION['role'];
-    }
-    else $loggedin = FALSE;
-
-    echo '<head><title>Plenty</title>' . 
-        '<link rel="stylesheet" href="css/style.css">' .
-        '<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">' .
-        '<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>'.
-        '<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>' .
-        '<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>' .
-        '<meta charset="utf-8">' .
-        '<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">'.
-        '</head>' .
-        '<body>'.
-        '<nav class="navbar fixed-top navbar-expand-lg bg-light navbar-light">'.
-        '<a class="navbar-brand" href="index.php">Plenty</a>' .
-        '<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">' .
-        '<span class="navbar-toggler-icon"></span>' .
-        '</button>';
+echo '<head><title>Plenty</title>' . 
+    '<link rel="stylesheet" href="css/style.css">' .
+    '<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">' .
+    '<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>'.
+    '<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>' .
+    '<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>' .
+    '<meta charset="utf-8">' .
+    '<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">'.
+    '</head>' .
+    '<body>'.
+    '<nav class="navbar fixed-top navbar-expand-lg bg-light navbar-light">'.
+    '<a class="navbar-brand" href="index.php">Plenty</a>' .
+    '<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">' .
+    '<span class="navbar-toggler-icon"></span>' .
+    '</button>';
 
   if ($loggedin && $role=='user')
   {
@@ -126,48 +124,48 @@
         '</nav>';
     }
 
-    echo    '<div id="demo" class="carousel slide carousel-fade" data-ride="carousel" data-interval= "5000" >' .
-                '<div class="carousel-inner">' .
-                    '<div class="carousel-item active">' .
-                    '<img src="img/car-man.jpg"  class="d-block w-100" alt="Man sniffs a flower" >' .
-                    '<div class="carousel-caption" style="position:absolute; top:15%; right: 5% ; font-size: 650%; text-align:right">' .
-                    '<p>For real <br>plant lovers</p>' .
-                    '</div>' .
-                    '</div>' .
-
-                    '<div class="carousel-item">' .
-                    '<img src="img/car-boy.jpg" class="d-block w-100"  alt="A Child holding a plant">' .
-                    '<div class="carousel-caption" style="position:absolute; top:10%; left: 4% ; font-size: 650%; text-align:left">' .
-                    '<p>For small<br> beginnings</p>' .
-                    '</div>' .
-                    '</div>' .
-
-                    '<div class="carousel-item">' .
-                    '<img src="img/car-laptop.jpg" class="d-block w-100" alt="Woman doing Homeoffice" >' .
-                    '<div class="carousel-caption" style="position:absolute; top:12%; right: 5% ; font-size: 650%; text-align:right">' .
-                    '<p>For your <br>home office</p>' .
-                    '</div>' .
-                    '</div>' .
-                    
-                    '<div class="carousel-item">' .
-                    '<img src="img/car-women.jpg" class="d-block w-100" alt="Women talking to each other on a couch" >' .
-                    '<div class="carousel-caption" style="position:absolute; top:12%; left: 4% ; font-size: 650%; text-align:left">' .
-                    '<p>For your <br>urban jungle</p>' .
-                    '</div>' .
-                    '</div>' .
-
-                    '<div class="carousel-item">' .
-                    '<img src="img/car-wooden.jpg" class="d-block w-100" alt="A Cat on a wooden shelf" >' .
-                    '<div class="carousel-caption" style="position:absolute; top:15%; right: 5% ; font-size: 650%; text-align:right">' .
-                    '<p>For your <br>furry friends</p>' .
-                    '</div>' .
-                    '</div>' .
+echo    '<div id="demo" class="carousel slide carousel-fade" data-ride="carousel" data-interval= "5000" >' .
+            '<div class="carousel-inner">' .
+                '<div class="carousel-item active">' .
+                '<img src="img/car-man.jpg"  class="d-block w-100" alt="Man sniffs a flower" >' .
+                '<div class="carousel-caption" style="position:absolute; top:15%; right: 5% ; font-size: 500%; text-align:right">' .
+                '<p>For real <br>plant lovers</p>' .
                 '</div>' .
                 '</div>' .
-            '</body>' .
 
-            '<div class="jumbotron text-center text-secondary" style="margin-bottom:0">' .
-            '<p>©2020 made with ♥ by codingmetta</p>' .
+                '<div class="carousel-item">' .
+                '<img src="img/car-boy.jpg" class="d-block w-100"  alt="A Child holding a plant">' .
+                '<div class="carousel-caption" style="position:absolute; top:10%; left: 4% ; font-size: 500%; text-align:left">' .
+                '<p>For small<br> beginnings</p>' .
+                '</div>' .
+                '</div>' .
+
+                '<div class="carousel-item">' .
+                '<img src="img/car-laptop.jpg" class="d-block w-100" alt="Woman doing Homeoffice" >' .
+                '<div class="carousel-caption" style="position:absolute; top:12%; right: 5% ; font-size: 500%; text-align:right">' .
+                '<p>For your <br>home office</p>' .
+                '</div>' .
+                '</div>' .
+                
+                '<div class="carousel-item">' .
+                '<img src="img/car-women.jpg" class="d-block w-100" alt="Women talking to each other on a couch" >' .
+                '<div class="carousel-caption" style="position:absolute; top:12%; left: 4% ; font-size: 500%; text-align:left">' .
+                '<p>For your <br>urban jungle</p>' .
+                '</div>' .
+                '</div>' .
+
+                '<div class="carousel-item">' .
+                '<img src="img/car-wooden.jpg" class="d-block w-100" alt="A Cat on a wooden shelf" >' .
+                '<div class="carousel-caption" style="position:absolute; top:15%; right: 5% ; font-size: 500%; text-align:right">' .
+                '<p>For your <br>furry friends</p>' .
+                '</div>' .
+                '</div>' .
+        '</div>' .
             '</div>' .
-            '</html>';
+        '</body>' .
+
+        '<div class="jumbotron text-center text-secondary" style="margin-bottom:0">' .
+        '<p>©2020 made with ♥ by codingmetta</p>' .
+        '</div>' .
+        '</html>';
 ?>
