@@ -1,5 +1,5 @@
 <?php
-/**@file         createProductTable.php
+/**@file         createUserTable.php
  * @brief       Script connects to database and creates table 'Users'
  *
  * @author      Talia Deckardt

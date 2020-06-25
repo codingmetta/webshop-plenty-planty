@@ -1,5 +1,5 @@
 <?php 
-/**@file        addAmin.php 
+/**@file        addAdmin.php 
  * @brief      Script adds user to database with role 'admin' when called
  *
  * @author     Talia Deckardt

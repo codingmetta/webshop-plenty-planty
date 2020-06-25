@@ -1,4 +1,11 @@
 <?php
+/**@file        jquery-mysql.php 
+ * @brief      ****NOT WORKING YET****
+ *			   Script is response to ajax call and displays the similar 
+ *			   Products in the Search field 
+ *				
+ * @author     Gordon Mueller, Talia Deckardt
+ */
 require 'login.php';
 	
 	$conn =mysqli_connect($servername, $username, $password);
