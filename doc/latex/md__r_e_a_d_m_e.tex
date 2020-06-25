@@ -1,1 +1,19 @@
-webshop-\/plenty-\/planty 
+\hypertarget{md__r_e_a_d_m_e_autotoc_md1}{}\doxysection{User Manual}\label{md__r_e_a_d_m_e_autotoc_md1}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md2}{}\doxysubsection{System Setup}\label{md__r_e_a_d_m_e_autotoc_md2}
+0. Run X\+A\+M\+PP and start all services \textquotesingle{}Apache\textquotesingle{}, \textquotesingle{}My\+S\+QL\textquotesingle{} and \textquotesingle{}Pro\+F\+TP\textquotesingle{}
+\begin{DoxyEnumerate}
+\item Call {\ttfamily localhost\+:8080/phpmyadmin/} from browser
+\item Create a DB and name it \textquotesingle{}plantytest\textquotesingle{}
+\item Call scripts one by one by the url in the browser in the following order\+:
+\end{DoxyEnumerate}
+\begin{DoxyItemize}
+\item {\ttfamily localhost\+:8080/webshop-\/plenty-\/planty/setup/create\+User\+Table.\+php}
+\item {\ttfamily localhost\+:8080/webshop-\/plenty-\/planty/setup/create\+Product\+Table.\+php}
+\item {\ttfamily localhost\+:8080/webshop-\/plenty-\/planty/setup/create\+Order\+Table.\+php}
+\item {\ttfamily localhost\+:8080/webshop-\/plenty-\/planty/setup/add\+Admin.\+php}
+\item {\ttfamily localhost\+:8080/webshop-\/plenty-\/planty/setup/fill\+Product\+Table\+Dummy\+Data.\+php}
+\item {\ttfamily localhost\+:8080/webshop-\/plenty-\/planty/setup/fill\+Users\+Dummy\+Data.\+php}
+\end{DoxyItemize}
+\begin{DoxyEnumerate}
+\item The setup for the Project is now done and the functionalities can be tested 
+\end{DoxyEnumerate}

@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.18"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Webshop: scripts/createProductTable.php File Reference</title>
+<title>Webshop: setup/createProductTable.php File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -61,7 +61,7 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_53e6fa9553ac22a5646d2a2b2d7b97a1.html">scripts</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_23cb120d669071c3724c6f6330318f9c.html">setup</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -71,6 +71,9 @@ $(function() {
 <div class="title">createProductTable.php File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Script connects to database and creates table 'Products'.  
+<a href="#details">More...</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
@@ -80,10 +83,14 @@ Variables</h2></td></tr>
 <tr class="separator:a283399b977a8159477c1394402d035fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a047170d6020a882807665812a27e2525"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="create_product_table_8php.html#a047170d6020a882807665812a27e2525">$sql</a></td></tr>
 <tr class="separator:a047170d6020a882807665812a27e2525"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5894a8dcaeff5a403c5ad8a6d070be41"><td class="memItemLeft" align="right" valign="top"><a class="el" href="destroy_session_8php.html#ae562638b80859f4e83a249c0c165087a">if</a>($conn-&gt;query($sql)===TRUE)&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="create_product_table_8php.html#a5894a8dcaeff5a403c5ad8a6d070be41">else</a></td></tr>
+<tr class="memitem:a5894a8dcaeff5a403c5ad8a6d070be41"><td class="memItemLeft" align="right" valign="top"><a class="el" href="dbconnection_8php.html#a283399b977a8159477c1394402d035fb">if</a>($conn-&gt;query($sql)===TRUE)&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="create_product_table_8php.html#a5894a8dcaeff5a403c5ad8a6d070be41">else</a></td></tr>
 <tr class="separator:a5894a8dcaeff5a403c5ad8a6d070be41"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Variable Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Script connects to database and creates table 'Products'. </p>
+<p>Script connects to database and creates table 'Users'.</p>
+<dl class="section author"><dt>Author</dt><dd>Talia Deckardt </dd></dl>
+</div><h2 class="groupheader">Variable Documentation</h2>
 <a id="aa8a5a87b9c1a6a0819b88447cbe41877"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aa8a5a87b9c1a6a0819b88447cbe41877">&#9670;&nbsp;</a></span>$conn</h2>
 
@@ -95,8 +102,6 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Script connects to database and creates a table for products</p>
-<dl class="section author"><dt>Author</dt><dd>Talia Deckardt </dd></dl>
 
 </div>
 </div>
@@ -131,7 +136,7 @@ Variables</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="destroy_session_8php.html#ae562638b80859f4e83a249c0c165087a">if</a> ( $conn-&gt;query( $sql)===TRUE) else</td>
+          <td class="memname"><a class="el" href="dbconnection_8php.html#a283399b977a8159477c1394402d035fb">if</a> ( $conn-&gt;query( $sql)===TRUE) else</td>
         </tr>
       </table>
 </div><div class="memdoc">

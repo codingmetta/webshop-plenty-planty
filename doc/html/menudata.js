@@ -35,9 +35,12 @@ var menudata={children:[
 {text:"e",url:"globals.html#index_e"},
 {text:"i",url:"globals.html#index_i"},
 {text:"m",url:"globals.html#index_m"},
-{text:"u",url:"globals.html#index_u"}]},
+{text:"s",url:"globals.html#index_s"},
+{text:"u",url:"globals.html#index_u"},
+{text:"w",url:"globals.html#index_w"}]},
 {text:"Functions",url:"globals_func.html"},
 {text:"Variables",url:"globals_vars.html",children:[
 {text:"$",url:"globals_vars.html#index__24"},
 {text:"e",url:"globals_vars.html#index_e"},
-{text:"i",url:"globals_vars.html#index_i"}]}]}]}]}
+{text:"i",url:"globals_vars.html#index_i"},
+{text:"w",url:"globals_vars.html#index_w"}]}]}]}]}

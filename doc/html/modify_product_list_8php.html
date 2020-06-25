@@ -76,11 +76,11 @@ $(function() {
 Variables</h2></td></tr>
 <tr class="memitem:aa8a5a87b9c1a6a0819b88447cbe41877"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="modify_product_list_8php.html#aa8a5a87b9c1a6a0819b88447cbe41877">$conn</a> = new mysqli($servername, $username, $password, $dbname)</td></tr>
 <tr class="separator:aa8a5a87b9c1a6a0819b88447cbe41877"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab4fc5f54d3662a7a4d39a3c1953c6dfe"><td class="memItemLeft" align="right" valign="top"><a class="el" href="destroy_session_8php.html#ae562638b80859f4e83a249c0c165087a">if</a>($conn-&gt;connect_error)&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="modify_product_list_8php.html#ab4fc5f54d3662a7a4d39a3c1953c6dfe">$sql</a> = &quot;SELECT product_id, name, price, amount FROM Products&quot;</td></tr>
+<tr class="memitem:ab4fc5f54d3662a7a4d39a3c1953c6dfe"><td class="memItemLeft" align="right" valign="top"><a class="el" href="dbconnection_8php.html#a283399b977a8159477c1394402d035fb">if</a>($conn-&gt;connect_error)&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="modify_product_list_8php.html#ab4fc5f54d3662a7a4d39a3c1953c6dfe">$sql</a> = &quot;SELECT product_id, name, price, amount FROM Products&quot;</td></tr>
 <tr class="separator:ab4fc5f54d3662a7a4d39a3c1953c6dfe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a112ef069ddc0454086e3d1e6d8d55d07"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="modify_product_list_8php.html#a112ef069ddc0454086e3d1e6d8d55d07">$result</a> = $conn-&gt;query($sql)</td></tr>
 <tr class="separator:a112ef069ddc0454086e3d1e6d8d55d07"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad908b96d32f6275bf3ab9e93283a8588"><td class="memItemLeft" align="right" valign="top"><a class="el" href="destroy_session_8php.html#ae562638b80859f4e83a249c0c165087a">if</a>($result-&gt;num_rows &gt; 0)&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="modify_product_list_8php.html#ad908b96d32f6275bf3ab9e93283a8588">else</a></td></tr>
+<tr class="memitem:ad908b96d32f6275bf3ab9e93283a8588"><td class="memItemLeft" align="right" valign="top"><a class="el" href="dbconnection_8php.html#a283399b977a8159477c1394402d035fb">if</a>($result-&gt;num_rows &gt; 0)&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="modify_product_list_8php.html#ad908b96d32f6275bf3ab9e93283a8588">else</a></td></tr>
 <tr class="separator:ad908b96d32f6275bf3ab9e93283a8588"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Variable Documentation</h2>
@@ -119,7 +119,7 @@ Variables</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="destroy_session_8php.html#ae562638b80859f4e83a249c0c165087a">if</a> ( $conn-&gt;connect_error) $sql = &quot;SELECT product_id, name, price, amount FROM Products&quot;</td>
+          <td class="memname"><a class="el" href="dbconnection_8php.html#a283399b977a8159477c1394402d035fb">if</a> ( $conn-&gt;connect_error) $sql = &quot;SELECT product_id, name, price, amount FROM Products&quot;</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -133,7 +133,7 @@ Variables</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="destroy_session_8php.html#ae562638b80859f4e83a249c0c165087a">if</a> ( $result-&gt;num_rows &gt; 0) else</td>
+          <td class="memname"><a class="el" href="dbconnection_8php.html#a283399b977a8159477c1394402d035fb">if</a> ( $result-&gt;num_rows &gt; 0) else</td>
         </tr>
       </table>
 </div><div class="memdoc">

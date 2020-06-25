@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.18"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Webshop: README</title>
+<title>Webshop: Webshop: Plenty Planty</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -62,10 +62,29 @@ $(function() {
 </div><!-- top -->
 <div class="PageDoc"><div class="header">
   <div class="headertitle">
-<div class="title">README </div>  </div>
+<div class="title">Webshop: Plenty Planty </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p>webshop-plenty-planty </p>
+<div class="textblock"><h1><a class="anchor" id="autotoc_md1"></a>
+User Manual</h1>
+<h2><a class="anchor" id="autotoc_md2"></a>
+System Setup</h2>
+<p>0. Run XAMPP and start all services 'Apache', 'MySQL' and 'ProFTP'</p><ol type="1">
+<li>Call <code>localhost:8080/phpmyadmin/</code> from browser</li>
+<li>Create a DB and name it 'plantytest'</li>
+<li>Call scripts one by one by the url in the browser in the following order:</li>
+</ol>
+<ul>
+<li><code>localhost:8080/webshop-plenty-planty/setup/createUserTable.php</code></li>
+<li><code>localhost:8080/webshop-plenty-planty/setup/createProductTable.php</code></li>
+<li><code>localhost:8080/webshop-plenty-planty/setup/createOrderTable.php</code></li>
+<li><code>localhost:8080/webshop-plenty-planty/setup/addAdmin.php</code></li>
+<li><code>localhost:8080/webshop-plenty-planty/setup/fillProductTableDummyData.php</code></li>
+<li><code>localhost:8080/webshop-plenty-planty/setup/fillUsersDummyData.php</code></li>
+</ul>
+<ol type="1">
+<li>The setup for the Project is now done and the functionalities can be tested </li>
+</ol>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
 <!-- start footer part -->

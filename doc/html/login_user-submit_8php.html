@@ -72,6 +72,9 @@ $(function() {
 <div class="title">loginUser-submit.php File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Script connects to database and gets submitted username and password inserted to the login prompt by the user. The script checks if the username exists and if the given password is correct. If its correct the session gets filled with the users credentials and the user is now logged in.  
+<a href="#details">More...</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
@@ -84,10 +87,13 @@ Functions</h2></td></tr>
 Variables</h2></td></tr>
 <tr class="memitem:aa8a5a87b9c1a6a0819b88447cbe41877"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="login_user-submit_8php.html#aa8a5a87b9c1a6a0819b88447cbe41877">$conn</a> = new mysqli($servername, $username, $password, $dbname)</td></tr>
 <tr class="separator:aa8a5a87b9c1a6a0819b88447cbe41877"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa20f0c0a1b2bf275951d2324de18c4a6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="destroy_session_8php.html#ae562638b80859f4e83a249c0c165087a">if</a>(isset($_SERVER['PHP_AUTH_USER']) &amp;&amp;isset($_SERVER['PHP_AUTH_PW']))&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="login_user-submit_8php.html#aa20f0c0a1b2bf275951d2324de18c4a6">else</a></td></tr>
+<tr class="memitem:aa20f0c0a1b2bf275951d2324de18c4a6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="dbconnection_8php.html#a283399b977a8159477c1394402d035fb">if</a>(isset($_SERVER['PHP_AUTH_USER']) &amp;&amp;isset($_SERVER['PHP_AUTH_PW']))&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="login_user-submit_8php.html#aa20f0c0a1b2bf275951d2324de18c4a6">else</a></td></tr>
 <tr class="separator:aa20f0c0a1b2bf275951d2324de18c4a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Function Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Script connects to database and gets submitted username and password inserted to the login prompt by the user. The script checks if the username exists and if the given password is correct. If its correct the session gets filled with the users credentials and the user is now logged in. </p>
+<dl class="section author"><dt>Author</dt><dd>Gordon Mueller, Talia Deckardt </dd></dl>
+</div><h2 class="groupheader">Function Documentation</h2>
 <a id="a406cfe6f1797cf62919e58a8794bac7e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a406cfe6f1797cf62919e58a8794bac7e">&#9670;&nbsp;</a></span>mysql_entities_fix_string()</h2>
 
@@ -156,8 +162,6 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Script connects to database and gets submitted username and password inserted by the user into the login prompt. The script checks if the username exists and if the given password is correct. If its correct the session gets filled with the users credentials and the user is now logged in.</p>
-<dl class="section author"><dt>Author</dt><dd>Talia Deckardt </dd></dl>
 
 </div>
 </div>
@@ -168,7 +172,7 @@ Variables</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="destroy_session_8php.html#ae562638b80859f4e83a249c0c165087a">if</a> (isset( $_SERVER[ 'PHP_AUTH_USER']) &amp;&amp;isset( $_SERVER[ 'PHP_AUTH_PW'])) else</td>
+          <td class="memname"><a class="el" href="dbconnection_8php.html#a283399b977a8159477c1394402d035fb">if</a> (isset( $_SERVER[ 'PHP_AUTH_USER']) &amp;&amp;isset( $_SERVER[ 'PHP_AUTH_PW'])) else</td>
         </tr>
       </table>
 </div><div class="memdoc">

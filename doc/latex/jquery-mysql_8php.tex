@@ -1,0 +1,40 @@
+\hypertarget{jquery-mysql_8php}{}\doxysection{scripts/jquery-\/mysql.php File Reference}
+\label{jquery-mysql_8php}\index{scripts/jquery-\/mysql.php@{scripts/jquery-\/mysql.php}}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{jquery-mysql_8php_aa8a5a87b9c1a6a0819b88447cbe41877}{\$conn}} =mysqli\+\_\+connect(\$servername, \$username, \$password)
+\item 
+\mbox{\hyperlink{jquery-mysql_8php_a63a7a283ea5dee8af1e2d5a3435bf370}{\$req}} = \char`\"{}S\+E\+L\+E\+CT name F\+R\+OM Products W\+H\+E\+RE name L\+I\+KE \textquotesingle{}\%\char`\"{}.\$\+\_\+\+R\+E\+Q\+U\+E\+ST\mbox{[}\textquotesingle{}term\textquotesingle{}\mbox{]}.\char`\"{}\%\textquotesingle{} \char`\"{}
+\item 
+\mbox{\hyperlink{jquery-mysql_8php_af59a5f7cd609e592c41dc3643efd3c98}{\$query}} = mysqli\+\_\+query(\$conn,\$req)
+\item 
+\mbox{\hyperlink{jquery-mysql_8php_af61fbf6605499341ecfe990eb8f212ce}{while}} ( \$row=mysqli\+\_\+fetch\+\_\+array( \$query))
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{jquery-mysql_8php_aa8a5a87b9c1a6a0819b88447cbe41877}\label{jquery-mysql_8php_aa8a5a87b9c1a6a0819b88447cbe41877}} 
+\index{jquery-\/mysql.php@{jquery-\/mysql.php}!\$conn@{\$conn}}
+\index{\$conn@{\$conn}!jquery-\/mysql.php@{jquery-\/mysql.php}}
+\doxysubsubsection{\texorpdfstring{\$conn}{$conn}}
+{\footnotesize\ttfamily \$conn =mysqli\+\_\+connect(\$servername, \$username, \$password)}
+
+\mbox{\Hypertarget{jquery-mysql_8php_af59a5f7cd609e592c41dc3643efd3c98}\label{jquery-mysql_8php_af59a5f7cd609e592c41dc3643efd3c98}} 
+\index{jquery-\/mysql.php@{jquery-\/mysql.php}!\$query@{\$query}}
+\index{\$query@{\$query}!jquery-\/mysql.php@{jquery-\/mysql.php}}
+\doxysubsubsection{\texorpdfstring{\$query}{$query}}
+{\footnotesize\ttfamily \$query = mysqli\+\_\+query(\$conn,\$req)}
+
+\mbox{\Hypertarget{jquery-mysql_8php_a63a7a283ea5dee8af1e2d5a3435bf370}\label{jquery-mysql_8php_a63a7a283ea5dee8af1e2d5a3435bf370}} 
+\index{jquery-\/mysql.php@{jquery-\/mysql.php}!\$req@{\$req}}
+\index{\$req@{\$req}!jquery-\/mysql.php@{jquery-\/mysql.php}}
+\doxysubsubsection{\texorpdfstring{\$req}{$req}}
+{\footnotesize\ttfamily \$req = \char`\"{}S\+E\+L\+E\+CT name F\+R\+OM Products W\+H\+E\+RE name L\+I\+KE \textquotesingle{}\%\char`\"{}.\$\+\_\+\+R\+E\+Q\+U\+E\+ST\mbox{[}\textquotesingle{}term\textquotesingle{}\mbox{]}.\char`\"{}\%\textquotesingle{} \char`\"{}}
+
+\mbox{\Hypertarget{jquery-mysql_8php_af61fbf6605499341ecfe990eb8f212ce}\label{jquery-mysql_8php_af61fbf6605499341ecfe990eb8f212ce}} 
+\index{jquery-\/mysql.php@{jquery-\/mysql.php}!while@{while}}
+\index{while@{while}!jquery-\/mysql.php@{jquery-\/mysql.php}}
+\doxysubsubsection{\texorpdfstring{while}{while}}
+{\footnotesize\ttfamily while(\$row=mysqli\+\_\+fetch\+\_\+array(\$query))}
+

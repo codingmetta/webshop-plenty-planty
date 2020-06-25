@@ -74,13 +74,13 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
-<tr class="memitem:acdbc769ad9164bced37444fabc935506"><td class="memItemLeft" align="right" valign="top"><a class="el" href="destroy_session_8php.html#ae562638b80859f4e83a249c0c165087a">if</a>(isset($_SESSION['username'])) <a class="el" href="logout_8php.html#aeb154798c244b4119871b717c88a4a37">else</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="show_all_products_8php.html#acdbc769ad9164bced37444fabc935506">$loggedin</a> = FALSE</td></tr>
+<tr class="memitem:acdbc769ad9164bced37444fabc935506"><td class="memItemLeft" align="right" valign="top"><a class="el" href="dbconnection_8php.html#a283399b977a8159477c1394402d035fb">if</a>(isset($_SESSION['username'])) <a class="el" href="fill_product_table_dummy_data_8php.html#a5894a8dcaeff5a403c5ad8a6d070be41">else</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="show_all_products_8php.html#acdbc769ad9164bced37444fabc935506">$loggedin</a> = FALSE</td></tr>
 <tr class="separator:acdbc769ad9164bced37444fabc935506"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a232d2e06ad82bc6180ac1c4fc246f6f8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="destroy_session_8php.html#ae562638b80859f4e83a249c0c165087a">if</a>($loggedin &amp;&amp; $role=='user')&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="show_all_products_8php.html#a232d2e06ad82bc6180ac1c4fc246f6f8">else</a></td></tr>
+<tr class="memitem:a232d2e06ad82bc6180ac1c4fc246f6f8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="dbconnection_8php.html#a283399b977a8159477c1394402d035fb">if</a>($loggedin &amp;&amp; $role=='user')&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="show_all_products_8php.html#a232d2e06ad82bc6180ac1c4fc246f6f8">else</a></td></tr>
 <tr class="separator:a232d2e06ad82bc6180ac1c4fc246f6f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa8a5a87b9c1a6a0819b88447cbe41877"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="show_all_products_8php.html#aa8a5a87b9c1a6a0819b88447cbe41877">$conn</a> = new mysqli($servername, $username, $password, $dbname)</td></tr>
 <tr class="separator:aa8a5a87b9c1a6a0819b88447cbe41877"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab4fc5f54d3662a7a4d39a3c1953c6dfe"><td class="memItemLeft" align="right" valign="top"><a class="el" href="destroy_session_8php.html#ae562638b80859f4e83a249c0c165087a">if</a>($conn-&gt;connect_error)&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="show_all_products_8php.html#ab4fc5f54d3662a7a4d39a3c1953c6dfe">$sql</a> = &quot;SELECT product_id, name, price, description, amount, img_path FROM Products&quot;</td></tr>
+<tr class="memitem:ab4fc5f54d3662a7a4d39a3c1953c6dfe"><td class="memItemLeft" align="right" valign="top"><a class="el" href="dbconnection_8php.html#a283399b977a8159477c1394402d035fb">if</a>($conn-&gt;connect_error)&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="show_all_products_8php.html#ab4fc5f54d3662a7a4d39a3c1953c6dfe">$sql</a> = &quot;SELECT name, price, description, amount, img_path, product_id FROM Products&quot;</td></tr>
 <tr class="separator:ab4fc5f54d3662a7a4d39a3c1953c6dfe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa25e883081c1808302b814e7fce5ea72"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="show_all_products_8php.html#aa25e883081c1808302b814e7fce5ea72">$resultset</a> = mysqli_query($conn, $sql) or die(&quot;database error:&quot;. mysqli_error($conn))</td></tr>
 <tr class="separator:aa25e883081c1808302b814e7fce5ea72"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -107,7 +107,7 @@ Variables</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="destroy_session_8php.html#ae562638b80859f4e83a249c0c165087a">if</a> (isset( $_SESSION[ 'username'])) <a class="el" href="logout_8php.html#aeb154798c244b4119871b717c88a4a37">else</a> $loggedin = FALSE</td>
+          <td class="memname"><a class="el" href="dbconnection_8php.html#a283399b977a8159477c1394402d035fb">if</a> (isset( $_SESSION[ 'username'])) <a class="el" href="fill_product_table_dummy_data_8php.html#a5894a8dcaeff5a403c5ad8a6d070be41">else</a> $loggedin = FALSE</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -135,7 +135,7 @@ Variables</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="destroy_session_8php.html#ae562638b80859f4e83a249c0c165087a">if</a> ( $conn-&gt;connect_error) $sql = &quot;SELECT product_id, name, price, description, amount, img_path FROM Products&quot;</td>
+          <td class="memname"><a class="el" href="dbconnection_8php.html#a283399b977a8159477c1394402d035fb">if</a> ( $conn-&gt;connect_error) $sql = &quot;SELECT name, price, description, amount, img_path, product_id FROM Products&quot;</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -149,7 +149,7 @@ Variables</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="destroy_session_8php.html#ae562638b80859f4e83a249c0c165087a">if</a> ( $loggedin &amp;&amp;$role=='user') else</td>
+          <td class="memname"><a class="el" href="dbconnection_8php.html#a283399b977a8159477c1394402d035fb">if</a> ( $loggedin &amp;&amp;$role=='user') else</td>
         </tr>
       </table>
 </div><div class="memdoc">

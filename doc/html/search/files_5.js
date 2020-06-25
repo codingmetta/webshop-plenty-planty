@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['index_2ephp_71',['index.php',['../index_8php.html',1,'']]]
+  ['jquery_2dmysql_2ephp_91',['jquery-mysql.php',['../jquery-mysql_8php.html',1,'']]]
 ];

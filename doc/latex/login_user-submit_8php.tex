@@ -1,5 +1,10 @@
 \hypertarget{login_user-submit_8php}{}\doxysection{scripts/login\+User-\/submit.php File Reference}
 \label{login_user-submit_8php}\index{scripts/loginUser-\/submit.php@{scripts/loginUser-\/submit.php}}
+
+
+Script connects to database and gets submitted username and password inserted to the login prompt by the user. The script checks if the username exists and if the given password is correct. If its correct the session gets filled with the users credentials and the user is now logged in.  
+
+
 \doxysubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -12,8 +17,16 @@
 \item 
 \mbox{\hyperlink{login_user-submit_8php_aa8a5a87b9c1a6a0819b88447cbe41877}{\$conn}} = new mysqli(\$servername, \$username, \$password, \$dbname)
 \item 
-\mbox{\hyperlink{destroy_session_8php_ae562638b80859f4e83a249c0c165087a}{if}}(isset(\$\+\_\+\+S\+E\+R\+V\+ER\mbox{[}\textquotesingle{}P\+H\+P\+\_\+\+A\+U\+T\+H\+\_\+\+U\+S\+ER\textquotesingle{}\mbox{]}) \&\&isset(\$\+\_\+\+S\+E\+R\+V\+ER\mbox{[}\textquotesingle{}P\+H\+P\+\_\+\+A\+U\+T\+H\+\_\+\+PW\textquotesingle{}\mbox{]})) \mbox{\hyperlink{login_user-submit_8php_aa20f0c0a1b2bf275951d2324de18c4a6}{else}}
+\mbox{\hyperlink{dbconnection_8php_a283399b977a8159477c1394402d035fb}{if}}(isset(\$\+\_\+\+S\+E\+R\+V\+ER\mbox{[}\textquotesingle{}P\+H\+P\+\_\+\+A\+U\+T\+H\+\_\+\+U\+S\+ER\textquotesingle{}\mbox{]}) \&\&isset(\$\+\_\+\+S\+E\+R\+V\+ER\mbox{[}\textquotesingle{}P\+H\+P\+\_\+\+A\+U\+T\+H\+\_\+\+PW\textquotesingle{}\mbox{]})) \mbox{\hyperlink{login_user-submit_8php_aa20f0c0a1b2bf275951d2324de18c4a6}{else}}
 \end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Script connects to database and gets submitted username and password inserted to the login prompt by the user. The script checks if the username exists and if the given password is correct. If its correct the session gets filled with the users credentials and the user is now logged in. 
+
+\begin{DoxyAuthor}{Author}
+Gordon Mueller, Talia Deckardt 
+\end{DoxyAuthor}
 
 
 \doxysubsection{Function Documentation}
@@ -38,16 +51,11 @@
 \doxysubsubsection{\texorpdfstring{\$conn}{$conn}}
 {\footnotesize\ttfamily \$conn = new mysqli(\$servername, \$username, \$password, \$dbname)}
 
-Script connects to database and gets submitted username and password inserted by the user into the login prompt. The script checks if the username exists and if the given password is correct. If its correct the session gets filled with the users credentials and the user is now logged in.
-
-\begin{DoxyAuthor}{Author}
-Talia Deckardt 
-\end{DoxyAuthor}
 \mbox{\Hypertarget{login_user-submit_8php_aa20f0c0a1b2bf275951d2324de18c4a6}\label{login_user-submit_8php_aa20f0c0a1b2bf275951d2324de18c4a6}} 
 \index{loginUser-\/submit.php@{loginUser-\/submit.php}!else@{else}}
 \index{else@{else}!loginUser-\/submit.php@{loginUser-\/submit.php}}
 \doxysubsubsection{\texorpdfstring{else}{else}}
-{\footnotesize\ttfamily \mbox{\hyperlink{destroy_session_8php_ae562638b80859f4e83a249c0c165087a}{if}} (isset( \$\+\_\+\+S\+E\+R\+V\+ER\mbox{[} \textquotesingle{}P\+H\+P\+\_\+\+A\+U\+T\+H\+\_\+\+U\+S\+ER\textquotesingle{}\mbox{]}) \&\&isset( \$\+\_\+\+S\+E\+R\+V\+ER\mbox{[} \textquotesingle{}P\+H\+P\+\_\+\+A\+U\+T\+H\+\_\+\+PW\textquotesingle{}\mbox{]})) else}
+{\footnotesize\ttfamily \mbox{\hyperlink{dbconnection_8php_a283399b977a8159477c1394402d035fb}{if}} (isset( \$\+\_\+\+S\+E\+R\+V\+ER\mbox{[} \textquotesingle{}P\+H\+P\+\_\+\+A\+U\+T\+H\+\_\+\+U\+S\+ER\textquotesingle{}\mbox{]}) \&\&isset( \$\+\_\+\+S\+E\+R\+V\+ER\mbox{[} \textquotesingle{}P\+H\+P\+\_\+\+A\+U\+T\+H\+\_\+\+PW\textquotesingle{}\mbox{]})) else}
 
 {\bfseries Initial value\+:}
 \begin{DoxyCode}{0}

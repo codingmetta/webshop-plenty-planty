@@ -65,10 +65,212 @@ $(function() {
 </div>
 </div><!-- top -->
 <div class="header">
+  <div class="summary">
+<a href="#func-members">Functions</a> &#124;
+<a href="#var-members">Variables</a>  </div>
   <div class="headertitle">
 <div class="title">createProduct-submit.php File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Script adds new product to database, when being called by the submition of productdetails by admin.  
+<a href="#details">More...</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:af15fe0e5253a09a22ffa67a8388a510f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="create_product-submit_8php.html#af15fe0e5253a09a22ffa67a8388a510f">add_product</a> ($conn, $pn, $dc, $pr, $am, $ip)</td></tr>
+<tr class="separator:af15fe0e5253a09a22ffa67a8388a510f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:aa8a5a87b9c1a6a0819b88447cbe41877"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="create_product-submit_8php.html#aa8a5a87b9c1a6a0819b88447cbe41877">$conn</a> = new mysqli($servername, $username, $password, $dbname)</td></tr>
+<tr class="separator:aa8a5a87b9c1a6a0819b88447cbe41877"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5d12c87c87d10d68fe835b9a33b1316f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="create_product-submit_8php.html#a5d12c87c87d10d68fe835b9a33b1316f">$productname</a> = $_POST['product_name']</td></tr>
+<tr class="separator:a5d12c87c87d10d68fe835b9a33b1316f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a87b032cba06009e3467abf1c8018d960"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="create_product-submit_8php.html#a87b032cba06009e3467abf1c8018d960">$description</a> = $_POST['description']</td></tr>
+<tr class="separator:a87b032cba06009e3467abf1c8018d960"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a264091074b1a8f4ed0abefd278831f6f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="create_product-submit_8php.html#a264091074b1a8f4ed0abefd278831f6f">$price</a> = $_POST['price']</td></tr>
+<tr class="separator:a264091074b1a8f4ed0abefd278831f6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af48fe050f529b6ca56356299183b7778"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="create_product-submit_8php.html#af48fe050f529b6ca56356299183b7778">$amount</a> = $_POST['amount']</td></tr>
+<tr class="separator:af48fe050f529b6ca56356299183b7778"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afc71bea0c174a1193c7e614898071ea8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="create_product-submit_8php.html#afc71bea0c174a1193c7e614898071ea8">$img_path</a> =$_POST['img_path']</td></tr>
+<tr class="separator:afc71bea0c174a1193c7e614898071ea8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acdbc769ad9164bced37444fabc935506"><td class="memItemLeft" align="right" valign="top"><a class="el" href="dbconnection_8php.html#a283399b977a8159477c1394402d035fb">if</a>(isset($_SESSION['username'])) <a class="el" href="fill_product_table_dummy_data_8php.html#a5894a8dcaeff5a403c5ad8a6d070be41">else</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="create_product-submit_8php.html#acdbc769ad9164bced37444fabc935506">$loggedin</a> = FALSE</td></tr>
+<tr class="separator:acdbc769ad9164bced37444fabc935506"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ade1c5e0b5a6080e3e2779bac631cc4c5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="dbconnection_8php.html#a283399b977a8159477c1394402d035fb">if</a>($loggedin &amp;&amp; $role='admin')&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="create_product-submit_8php.html#ade1c5e0b5a6080e3e2779bac631cc4c5">else</a></td></tr>
+<tr class="separator:ade1c5e0b5a6080e3e2779bac631cc4c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Script adds new product to database, when being called by the submition of productdetails by admin. </p>
+<dl class="section author"><dt>Author</dt><dd>Talia Deckardt </dd></dl>
+</div><h2 class="groupheader">Function Documentation</h2>
+<a id="af15fe0e5253a09a22ffa67a8388a510f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af15fe0e5253a09a22ffa67a8388a510f">&#9670;&nbsp;</a></span>add_product()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">add_product </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>$conn</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>$pn</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>$dc</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>$pr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>$am</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>$ip</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Variable Documentation</h2>
+<a id="af48fe050f529b6ca56356299183b7778"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af48fe050f529b6ca56356299183b7778">&#9670;&nbsp;</a></span>$amount</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">$amount = $_POST['amount']</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa8a5a87b9c1a6a0819b88447cbe41877"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa8a5a87b9c1a6a0819b88447cbe41877">&#9670;&nbsp;</a></span>$conn</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">$conn = new mysqli($servername, $username, $password, $dbname)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a87b032cba06009e3467abf1c8018d960"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a87b032cba06009e3467abf1c8018d960">&#9670;&nbsp;</a></span>$description</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">$description = $_POST['description']</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="afc71bea0c174a1193c7e614898071ea8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afc71bea0c174a1193c7e614898071ea8">&#9670;&nbsp;</a></span>$img_path</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">$img_path =$_POST['img_path']</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="acdbc769ad9164bced37444fabc935506"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acdbc769ad9164bced37444fabc935506">&#9670;&nbsp;</a></span>$loggedin</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="dbconnection_8php.html#a283399b977a8159477c1394402d035fb">if</a> (isset( $_SESSION[ 'username'])) <a class="el" href="fill_product_table_dummy_data_8php.html#a5894a8dcaeff5a403c5ad8a6d070be41">else</a> $loggedin = FALSE</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a264091074b1a8f4ed0abefd278831f6f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a264091074b1a8f4ed0abefd278831f6f">&#9670;&nbsp;</a></span>$price</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">$price = $_POST['price']</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5d12c87c87d10d68fe835b9a33b1316f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5d12c87c87d10d68fe835b9a33b1316f">&#9670;&nbsp;</a></span>$productname</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">$productname = $_POST['product_name']</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ade1c5e0b5a6080e3e2779bac631cc4c5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ade1c5e0b5a6080e3e2779bac631cc4c5">&#9670;&nbsp;</a></span>else</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="dbconnection_8php.html#a283399b977a8159477c1394402d035fb">if</a> ( $loggedin &amp;&amp;$role='admin') else</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">{</div>
+<div class="line">    echo <span class="stringliteral">&quot;Restricted area. Please &lt;a href=&#39;../index.php&#39;&gt;click here&lt;/a&gt; to go back to the Homepage.&quot;</span></div>
+</div><!-- fragment -->
+</div>
+</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

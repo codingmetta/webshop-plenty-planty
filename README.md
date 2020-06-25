@@ -1,5 +1,5 @@
-# Webshop: Plenty Planty
-## User Manual
+# User Manual
+## Webshop: Plenty Planty
 
 ### System Setup
 
