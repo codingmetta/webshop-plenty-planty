@@ -11,6 +11,7 @@ if (isset($_SESSION['username']))
 }
 else $loggedin = FALSE;
 
+/*Head Section and Navigation Bar*/
 echo '<head><title>Plenty</title>' . 
     '<link rel="stylesheet" href="css/style.css">' .
     '<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">' .
@@ -27,6 +28,7 @@ echo '<head><title>Plenty</title>' .
     '<span class="navbar-toggler-icon"></span>' .
     '</button>';
 
+  /*Parts of Navbar that can be seen when user is loggedin*/  
   if ($loggedin && $role=='user')
   {
     echo  '<div class="collapse navbar-collapse" id="navbarSupportedContent">' .
@@ -70,6 +72,7 @@ echo '<head><title>Plenty</title>' .
             '</ul>' .
         '</nav>';
         }
+    /*Parts that can be seen when admin is loggedin*/    
     else if ($loggedin && $role=='admin')
   {
     echo  '<div class="collapse navbar-collapse" id="navbarSupportedContent">' .
@@ -86,8 +89,9 @@ echo '<head><title>Plenty</title>' .
                 '<a class="nav-link text-danger" href="scripts/destroySession.php"> Log Out </a></li>' .
             '</ul>' .
         '</nav>';  }
+    /*Parts that are seen when not user is not loggedin yet*/    
     else
-  {
+  {  
     echo    '<div class="collapse navbar-collapse" id="navbarSupportedContent">' .
             '<ul class="navbar-nav mr-auto">' .
                 '<li class="nav-item active">' .
@@ -123,7 +127,7 @@ echo '<head><title>Plenty</title>' .
             '</ul>' .
         '</nav>';
     }
-
+/*Bootstrap Carousel that shows some use cases for the products and the footer*/
 echo    '<div id="demo" class="carousel slide carousel-fade" data-ride="carousel" data-interval= "5000" >' .
             '<div class="carousel-inner">' .
                 '<div class="carousel-item active">' .
