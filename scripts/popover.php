@@ -1,4 +1,11 @@
 <?php
+/**@file        popover.php 
+ * @brief      ****NOT WORKING YET***
+ *             Script connects to database and returns the review for a 
+ *             certain product as a string.
+ *
+ * @author     Talia Deckardt
+ */
 echo showReview();
 function showReview() {
     require 'login.php';
@@ -10,8 +17,8 @@ function showReview() {
     if ($result->num_rows > 0) {
         while($row = mysqli_fetch_array($result)) {
             $string=$row[0];
-            //echo $string;
-            echo '<div id="test">Hello, World!</div>';
+            echo $string;
+            //echo '<div id="test">Hello, World!</div>';
         } 
     } else {
         echo "0 results";
