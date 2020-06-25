@@ -6,7 +6,9 @@
  *
  * @author     Talia Deckardt
  */
+
 echo showReview();
+
 function showReview() {
     require 'login.php';
     $c = new mysqli($servername, $username, $password, $dbname);
@@ -25,5 +27,6 @@ function showReview() {
     }
     $c->close();
 }
+
 
 ?>

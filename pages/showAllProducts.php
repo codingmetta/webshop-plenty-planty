@@ -23,41 +23,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 </head>
 <body>
-<!-- Not working yet: jQuery Script trying to fetch reviews from products by ajax call-->
+<!--**************************** NOT WORKING YET: ********************************* 
+    jQuery Script trying to fetch reviews from products by ajax call-->
 <script>
-    $(document).ready(function(){
-        $('[data-toggle="popover"]').popover({
-            "html":true,
-            "content": function(){
-                return details();
-            }
-        });
-/*
-        $('[data-toggle="popover"]').popover({
+$(document).ready(function(){
+    $('[data-toggle="popover"]').popover({
         "html":true,
-        "content":$.get({
-            url: '../scripts/popover.php',
-            });
-        });
-
+        "content": function(){
+            return details();
+        }
     });
-*/
-/*
-$('[data-toggle="popover"]').popover({
-"html":true,
-"content": $.get("../scripts/popover.php", function(data, status){
-    alert("Data: " + data + "\nStatus: " + status);
-  });
-});
-*/
-/*
-$('[data-toggle="popover"]').popover({
-"html":true,
-"content": $.post("../scripts/popover.php", function(data, status){
-    alert("Data: " + data + "\nStatus: " + status);
-  });
-});
-*/
 });
 
 function details(){
@@ -66,6 +41,7 @@ function details(){
     return string;
 }
 </script>
+<!-- *****************************************************************************-->
 
 
 <!-- A grey horizontal navbar that becomes vertical on small screens -->
@@ -100,7 +76,7 @@ function details(){
     </ul>
 
 
-    <!--NOT WORKING YET: Trying to implement a dynamic search for products-->
+<!-- ******NOT WORKING YET: Trying to implement a dynamic search for products ****-->
     <script>
     /*
         $(function() {
@@ -109,30 +85,13 @@ function details(){
             })
         });
     */
-
-    /*    
-    function showHint(str){
-        if (str.length == 0) { 
-        document.getElementById("txtHint").innerHTML = "";
-        return;
-        } else {
-        var xmlhttp = new XMLHttpRequest();
-        xmlhttp.onreadystatechange = function() {
-            if (this.readyState == 4 && this.status == 200) {
-            document.getElementById("txtHint").innerHTML = this.responseText;
-            }
-        };
-        xmlhttp.open("GET", "gethint.php?q=" + str, true);
-        xmlhttp.send();
-        }
-    }
-    */
     </script>
     <form action="" class="form-inline my-2 my-lg-0">
         <input class="form-control mr-sm-2" id="search" type="search" onsearch="showHint(this.value)" placeholder="Search" aria-label="Search">
-        <!--<p>Suggestions: <span id="txtHint"></span></p>-->
         <button class="btn btn-outline-secondary my-2 my-sm-0" type="submit">Search</button>
     </form>
+<!-- *****************************************************************************-->
+
 
 <?php
   if ($loggedin && $role=='user')
@@ -164,7 +123,7 @@ function details(){
 </nav>
 <br> <br><br> 
 
-<!--***Products listed as responsive cards retrieved from table 'Products'***-->
+<!--Products listed as responsive cards retrieved from table 'Products'-->
 <div class="container">
 <div class="card-columns">
 
@@ -204,7 +163,7 @@ while( $record = mysqli_fetch_assoc($resultset) ) {
         </div>
 
 
-        <!-- Placeholding implementation for rating system -->
+        <!-- Placeholding implementation for star rating system -->
         <div class="rating d-flex justify-content-end">
             <ul class="row rating" style="list-style-type:none; margin-right:2%; margin-top:4%; margin-bottom: -1.5%">
                 <li><i class="far fa-star"></i></li>
@@ -214,12 +173,15 @@ while( $record = mysqli_fetch_assoc($resultset) ) {
                 <li><i class="far fa-star"></i></li>
             </ul> 
         </div>
-        <div class="container  d-flex  justify-content-end">
+        
+        <div class="container  d-flex  justify-content-end" id="popup-request">
             <a href="#" id="review-popup" data-toggle="popover" data-trigger="focus" title="Reviews">Reviews</a>
         </div>
+        
+
     </div>
     
-    <!-- Data hidden submitted to php script to make a purchase and update product amount in stock-->
+    <!-- Data submitted hidden to php script to make a purchase and update product amount in stock-->
     <div class="card-footer">
         <div class="d-flex justify-content-between" style="display:flex">
             <div class="desc" id="btn-buy">
