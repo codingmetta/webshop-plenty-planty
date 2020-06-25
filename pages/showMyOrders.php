@@ -1,6 +1,5 @@
 <?php
 session_start();
-
 if (isset($_SESSION['username']))
 {
     $loggeduser = $_SESSION['username'];
@@ -23,7 +22,7 @@ else $loggedin = FALSE;
 </head>
 <body>
 
-<!--Right Card displaying Products from db-->
+<!--Card displaying all Orders of the user-->
     <div class="card d-flex bg-light justify-content-center" id="right-card" style="max_width:78%; padding: 3.5%" >
         <div class="card-head">
             <br> <br>
@@ -53,19 +52,12 @@ else $loggedin = FALSE;
                 $sql = "SELECT order_id, product_name, product_price, order_amount, review, order_date FROM Orders WHERE username='$loggeduser'";
                 $result = $conn->query($sql);
                 ?>
-                <tbody>
-                <?php
 
+                <tbody>
+
+                <?php
                 if ($result->num_rows > 0) {
                     while($row = mysqli_fetch_array($result)) {
-                        /*            echo ' <tr>
-                        <td><a href="review.php">' . $row[0] .  '</a></td>
-                        <td>' . $row[1] .  '</td>
-                        <td>' . $row[2] .  '</td>
-                        <td>' . $row[3] .  '</td>
-                        <td>' . $row[4] .  '</td>
-                        <td>' . $row[5] .  '</td>
-                        <tr>';*/
                         echo ' <tr>
                         <td>' . $row[0] .  '</td>
                         <td>' . $row[1] .  '</td>
@@ -85,22 +77,24 @@ else $loggedin = FALSE;
             <br>
             <hr>
 
-                    <div id="review-group" class="card text-white bg-secondary  p-2" style="max-width: 40%">
-                        <div class="card-header">
-                        <h5> Review your Order </h5>       
-                        </div>
-                        <div class="card-body">
-                            <form name= "alterProductReview" action="../scripts/alterProductReview-submit.php" method="post">
-                            <label for="order_id">
-                            <input type="text" placeholder="Order ID" name="order_id" required>
-                            </label> 
-                            <p style="text-size: 6px">Was the ordered product as described? Tell us!</p>
-                            <textarea type="text" name="review" id="review" rows="5" cols="42" style="" required>
-                            </textarea>                           
-                            <button type="submit" class="btn btn-block btn-primary"><i class="fas fa-sync-alt" style="margin:2%"></i> Send </button>
-                            </form>
-                        </div>
-                    </div>
+            <!--Input Fields to review a certain order-->
+            <div id="review-group" class="card text-white bg-secondary  p-2" style="max-width: 40%">
+                <div class="card-header">
+                <h5> Review your Order </h5>       
+                </div>
+                <div class="card-body">
+                    <form name= "alterProductReview" action="../scripts/alterProductReview-submit.php" method="post">
+                    <label for="order_id">
+                    <input type="text" placeholder="Order ID" name="order_id" required>
+                    </label> 
+                    <p style="text-size: 6px">Was the ordered product as described? Tell us!</p>
+                    <textarea type="text" name="review" id="review" rows="5" cols="42" style="" required>
+                    </textarea>                           
+                    <button type="submit" class="btn btn-block btn-primary"><i class="fas fa-sync-alt" style="margin:2%"></i> Send </button>
+                    </form>
+                </div>
+            </div>
+
         </div>
     </div>
 </body>

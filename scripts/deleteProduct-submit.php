@@ -13,18 +13,19 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 $delete= $_POST['delete'];
 
 session_start();
-    if (isset($_SESSION['username']))
-    {
-        $loggedin = TRUE;
-        $role = $_SESSION['role'];
-    }
-    else $loggedin = FALSE;
+if (isset($_SESSION['username']))
+{
+    $loggedin = TRUE;
+    $role = $_SESSION['role'];
+}
+else $loggedin = FALSE;
 
-    if ($loggedin && $role='admin'){
-        delete_product($conn, $delete);
-    } else {
-        echo "Restricted area. Please <a href='../index.php'>click here</a> to go back to the Homepage.";
-    }
+//Script checks if user is admin and has the permission to delete a product
+if ($loggedin && $role='admin'){
+    delete_product($conn, $delete);
+} else {
+    echo "Restricted area. Please <a href='../index.php'>click here</a> to go back to the Homepage.";
+}
 
 
 

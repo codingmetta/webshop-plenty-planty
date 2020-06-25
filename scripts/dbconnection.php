@@ -4,7 +4,6 @@
  *
  * @author Talia Deckardt
  */
-// NURN
 
 require_once 'login.php';
 // Create connection

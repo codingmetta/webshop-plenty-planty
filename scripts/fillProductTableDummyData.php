@@ -10,6 +10,7 @@ require 'login.php';
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
 
+// SQL to insert dummy data
 $sql = "INSERT INTO Products (name, description, price, amount, img_path)
 VALUES ('Sanseviera', 'sansevieria trifasciata | oxygen producer | tropical asia and africa', '11.95','65', '../img/sanseviera.jpg'),
         ('Monstera', 'monstera deliciosa | air-cleansing | latin america', '23.95','42','../img/monstera.jpg'),
